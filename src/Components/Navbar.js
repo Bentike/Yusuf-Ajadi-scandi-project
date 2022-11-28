@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import logo from '../Images/a-logo.png';
+import cart from '../Images/cart-logo.png';
 
 class Navbar extends Component{
     render(){
@@ -11,13 +13,14 @@ class Navbar extends Component{
                     <li>Kids</li>
                 </ul>
              </div>
-             
-             <div>
 
+             <div>
+                <img src={logo} alt='convereter'/>
              </div>
 
              <div>
-
+                <p>$</p>
+                <img src={cart} alt="cart-logo"/>
              </div> 
            </nav>
         )
