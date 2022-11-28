@@ -3,11 +3,23 @@ import React, {Component} from "react";
 class Navbar extends Component{
     render(){
         return(
-            <div>
-                <h1>
-                    Navbar
-                </h1>
-            </div>
+           <nav>
+             <div>
+                <ul>
+                    <li>Women</li>
+                    <li>Men</li>
+                    <li>Kids</li>
+                </ul>
+             </div>
+             
+             <div>
+
+             </div>
+
+             <div>
+
+             </div> 
+           </nav>
         )
     }
 }
