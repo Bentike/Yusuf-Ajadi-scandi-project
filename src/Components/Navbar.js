@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import logo from '../Images/a-logo.png';
 import cart from '../Images/cart-logo.png';
+import '../Styles/Navbar.css';
 
 class Navbar extends Component{
     render(){
