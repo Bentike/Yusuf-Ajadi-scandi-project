@@ -10,24 +10,28 @@ class Navbar extends Component{
     render(){
         return(
            <nav>
-             <div>
-                <ul>
+             <div className="nav-div">
+                <ul  className="nav-items">
                     <li>Women</li>
                     <li>Men</li>
                     <li>Kids</li>
                 </ul>
              </div>
 
-             <div>
+             <div className="converter">
                 <img src={logo} alt='convereter'/>
              </div>
 
-             <div>
+             <div className="cart-div">
                 <div>
-                   <img src={dollar} alt="dollar" />
-                   <img src={down} alt="arrow"/>
+                  <select name="currency">
+                     <option value="dollar">$</option>
+                     <option value="dollar">#</option>
+                  </select>  
                 </div>
-                <img src={cart} alt="cart-logo"/>
+                <div>
+                  <img src={cart} alt="cart-logo"/>
+                </div>
              </div> 
            </nav>
         )

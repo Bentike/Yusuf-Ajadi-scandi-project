@@ -1,4 +1,35 @@
 nav{
-    color: #5ECE7B;
+    /* color: #5ECE7B; */
     font-family: 'Raleway';
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+
+.nav-items{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.nav-items li {
+    margin: 0 20px;
+    text-transform: uppercase;
+}
+
+.cart-div{
+    display: flex;
+    flex-direction: row;
+}
+
+select{
+    border: none;
+    outline: none;
+    margin-right: 20px;
+}
+
+.converter{
+    width: 15%;
+    margin: 0 auto;
 }
