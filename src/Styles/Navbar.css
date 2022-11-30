@@ -36,6 +36,10 @@ select{
     margin-right: 20px;
 }
 
+select.decorated option:hover {
+    background-color: #5ECE7B;
+}
+
 .converter{
     width: 15%;
     margin: 0 auto;
