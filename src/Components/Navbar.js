@@ -1,8 +1,6 @@
 import React, {Component} from "react";
 import logo from '../Images/a-logo.png';
 import cart from '../Images/cart-logo.png';
-import dollar from '../Images/dollar.png';
-import down from '../Images/arrow-down.png';
 
 import '../Styles/Navbar.css';
 

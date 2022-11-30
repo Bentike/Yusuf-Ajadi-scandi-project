@@ -1,5 +1,4 @@
 nav{
-    /* color: #5ECE7B; */
     font-family: 'Raleway';
     display: flex;
     flex-direction: row;
@@ -16,11 +15,19 @@ nav{
 .nav-items li {
     margin: 0 20px;
     text-transform: uppercase;
+    transition: all ease-in-out .1s;
+    padding-bottom: 10px;
+}
+
+.nav-items li:hover{
+    color: #5ECE7B; 
+    border-bottom: 2px solid #5ECE7B;
 }
 
 .cart-div{
     display: flex;
     flex-direction: row;
+    margin-right: 50px;
 }
 
 select{
