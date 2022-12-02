@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-class Pdp extends Component{
+class Category extends Component{
     render(){
         return(
             <div>Product Description</div>
@@ -8,4 +8,4 @@ class Pdp extends Component{
     }
 }
 
-export default Pdp;
+export default Category;
