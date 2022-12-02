@@ -6,8 +6,8 @@ class Product extends Component{
         const {photo, productName, productPrice} = this.props;
 
         return(
-            <div>
-                 <img src={photo} alt='product image'/>
+            <div className="product-wrap">
+                 <img className="product-img" src={photo} alt='product image'/>
                  <p>{productName}</p>
                  <p>{productPrice}</p>
             </div>

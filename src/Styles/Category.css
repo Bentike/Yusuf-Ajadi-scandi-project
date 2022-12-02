@@ -2,3 +2,14 @@
     width: 90%;
     margin: 0 auto;
 }
+
+.header{
+    margin-bottom: 40px;
+}
+
+.product-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
