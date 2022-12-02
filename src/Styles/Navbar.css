@@ -3,7 +3,7 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 15px 50px;
+    padding: 0px 50px;
 }
 
 .nav-items{
