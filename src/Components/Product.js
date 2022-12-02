@@ -7,7 +7,7 @@ class Product extends Component{
 
         return(
             <div className="product-wrap">
-                 <img className="product-img" src={photo} alt='product image'/>
+                 <img className="product-img" src={photo} alt='product'/>
                  <p>{productName}</p>
                  <p>{productPrice}</p>
             </div>
