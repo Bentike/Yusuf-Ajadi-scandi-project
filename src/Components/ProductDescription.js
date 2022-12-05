@@ -9,7 +9,7 @@ class ProductDescription extends Component{
             <div>
                 <Navbar/>
                 <div className="product">
-                    <div className="product-wrap">
+                    <div className="product-wrapper">
                         <div className="product-bar">
                             <img className="product-bar-img" src={wool} alt='product'/>
                             <img className="product-bar-img" src={wool} alt='product'/>

@@ -9,8 +9,9 @@
     margin: 0 25px 15px 15px;
 }
 
-.product-wrap{
+.product-wrapper{
     display: flex;
+    margin: 20px 50px;
 }
 
 .product{
