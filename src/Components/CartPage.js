@@ -6,7 +6,7 @@ class CartPage extends Component{
         return(
             <div>
                 <Navbar/>
-                Welcome To Cart Page
+                <h2>CART</h2>
             </div>
         );
     }
