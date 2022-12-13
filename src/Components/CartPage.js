@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Navbar from './Navbar';
+import CartItem from "./CartItem";
 import '../Styles/Cart.css';
 
 class CartPage extends Component{
@@ -9,7 +10,7 @@ class CartPage extends Component{
                 <Navbar/>
                 <h2 className="cart-header">CART</h2>
                 <hr/>
-                  
+                  <CartItem/>
                 <hr/>
             </div>
         );
