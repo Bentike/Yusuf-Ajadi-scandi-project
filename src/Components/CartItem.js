@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import SizeAndColor from "./SizeAndColor";
+import wool from '../Images/wool.png';
 
 class CartItem extends Component {
     render(){
@@ -11,8 +12,19 @@ class CartItem extends Component {
                     <p>$50.00</p>
                     <SizeAndColor/>
                 </div>
-                <div></div>
+                <div>
+                    <div>
+                        <button>+</button>
+                        <p>1</p>
+                        <button>-</button>
+                        <div>
+                            <img src={wool} alt="wool"/>
+                        </div>
+                    </div>
+                </div>
             </div>
-        )
+        );
     }
 }
+
+export default CartItem;
