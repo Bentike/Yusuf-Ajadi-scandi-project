@@ -7,7 +7,7 @@ class CartPage extends Component{
         return(
             <div>
                 <Navbar/>
-                <h2>CART</h2>
+                <h2 className="cart-header">CART</h2>
                 <hr/>
                   
                 <hr/>

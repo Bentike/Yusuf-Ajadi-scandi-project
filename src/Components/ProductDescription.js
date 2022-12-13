@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Navbar from "./Navbar";
 import wool from '../Images/wool.png';
 import '../Styles/ProductDescription.css';
+import SizeAndColor from "./SizeAndColor";
 
 class ProductDescription extends Component{
     render(){
@@ -24,19 +25,7 @@ class ProductDescription extends Component{
                             <h2>Apollo</h2>
                             <h3>Running Short</h3>
                         </div>
-                        <p>Size:</p>
-                        <div className="sizes">
-                           <p>XS</p>
-                           <p>S</p>
-                           <p>M</p>
-                           <p>L</p>
-                        </div>
-                        <p>Color:</p>
-                        <div className="colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
+                       <SizeAndColor/>
                         <h3>Price:</h3>
                         <p>$50.00</p>
                         <button>ADD TO CART</button>
