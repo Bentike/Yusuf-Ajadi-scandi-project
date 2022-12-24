@@ -23,8 +23,9 @@ class Navbar extends Component{
              <div className="cart-div">
                 <div>
                   <select name="currency">
-                     <option value="USD">$</option>
-                     <option value="NGN">#</option>
+                     <option value="USD">$ USD</option>
+                     <option value="NGN"># NGN</option>
+                     <option value="NGN">$ EUR</option>
                   </select>  
                 </div>
                 <div>
