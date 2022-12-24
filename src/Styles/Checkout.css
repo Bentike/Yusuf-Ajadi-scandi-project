@@ -2,3 +2,16 @@
     margin-left: 130px;
     margin-top: 30px;
 }
+
+.val{
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.qty{
+   margin-left: 2px;
+}
+
+.total{
+   margin-left: 28px;
+}
