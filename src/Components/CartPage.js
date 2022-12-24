@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Navbar from './Navbar';
 import CartItem from "./CartItem";
+import Checkout from "./Checkout";
 import '../Styles/Cart.css';
 
 class CartPage extends Component{
@@ -13,6 +14,7 @@ class CartPage extends Component{
                   <CartItem/>
                   <CartItem/>
                   <CartItem/>
+                  <Checkout/>
             </div>
         );
     }
