@@ -1,7 +1,7 @@
 import React, {Component} from "react";
+import { Link } from "react-router-dom";
 import logo from '../Images/a-logo.png';
 import cart from '../Images/cart-logo.png';
-
 import '../Styles/Navbar.css';
 
 class Navbar extends Component{
@@ -10,9 +10,9 @@ class Navbar extends Component{
            <nav>
              <div className="nav-div">
                 <ul  className="nav-items">
-                    <li>Women</li>
-                    <li>Men</li>
-                    <li>Kids</li>
+                    <Link to='women'><li>Women</li></Link>
+                    <Link to='men'><li>Men</li></Link>
+                    <Link to='kids'><li>Kids</li></Link>
                 </ul>
              </div>
 
@@ -33,7 +33,7 @@ class Navbar extends Component{
                 </div>
              </div> 
            </nav>
-        )
+        );
     }
 }
 
