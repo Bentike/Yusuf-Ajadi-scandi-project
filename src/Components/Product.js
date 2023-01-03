@@ -4,14 +4,14 @@ import '../Styles/Product.css';
 
 class Product extends Component{
     render(){
-        const {photo, productName, productPrice} = this.props;
+        const {photo, productName, productPrice, handleMouseEnter, handleMouseLeave} = this.props;
 
         return(
-            <div className="product-wrap">
+            <div className="product-wrap" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                  <img className="product-img" src={photo} alt="product"/>
                  <p>{productName}</p>
                  <p>{productPrice}</p>
-                 <img className="cart" src={cart} alt="add to cart"/>
+                 <img id="cart" src={cart} alt="add to cart"/>
             </div>
         );
     }

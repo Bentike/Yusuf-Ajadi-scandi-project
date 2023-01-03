@@ -5,13 +5,20 @@ import '../Styles/Category.css';
 import wool from '../Images/wool.png';
 
 class Category extends Component{
+ 
     render(){
+        const cartLogo = document.getElementById("cart");
+    
+        const handleMouseEnter = () => {
+           cartLogo.style.display = "none";
+        }
+
         return(
             <div className="category">
                 <Navbar/>
                 <h2 className="header">Category name</h2>
                 <div className="product-container">
-                    <Product photo={wool} productName='wool hood' productPrice='$50.00'/>
+                    <Product handleMouseEnter={handleMouseEnter} photo={wool} productName='wool hood' productPrice='$50.00'/>
                     <Product photo={wool} productName='wool hood' productPrice='$50.00'/>
                     <Product photo={wool} productName='wool hood' productPrice='$50.00'/>
                     <Product photo={wool} productName='wool hood' productPrice='$50.00'/>
