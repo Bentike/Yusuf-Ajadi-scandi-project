@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from '../Images/a-logo.png';
 import cart from '../Images/cart-logo.png';
 import '../Styles/Navbar.css';
@@ -10,9 +10,9 @@ class Navbar extends Component{
            <nav>
              <div className="nav-div">
                 <ul  className="nav-items">
-                    <Link className="list" to='women'>Women</Link>
-                    <Link className="list" to='men'>Men</Link>
-                    <Link className="list" to='kids'>Kids</Link>
+                    <NavLink className="list" to='/women'>Women</NavLink>
+                    <NavLink className="list" to='/men'>Men</NavLink>
+                    <NavLink className="list" to='/kids'>Kids</NavLink>
                 </ul>
              </div>
 
