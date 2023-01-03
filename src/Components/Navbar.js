@@ -10,9 +10,9 @@ class Navbar extends Component{
            <nav>
              <div className="nav-div">
                 <ul  className="nav-items">
-                    <Link to='women'><li>Women</li></Link>
-                    <Link to='men'><li>Men</li></Link>
-                    <Link to='kids'><li>Kids</li></Link>
+                    <li>Women</li>
+                    <li>Men</li>
+                    <li>Kids</li>
                 </ul>
              </div>
 
