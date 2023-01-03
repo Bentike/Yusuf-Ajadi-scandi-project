@@ -5,12 +5,14 @@ import '../Styles/Category.css';
 import wool from '../Images/wool.png';
 
 class Category extends Component{
- 
+  constructor(props){
+    super(props);
+    this.cartOnOff = React.createRef();
+  }
     render(){
-        const cartLogo = document.getElementById("cart");
-    
+       
         const handleMouseEnter = () => {
-           cartLogo.style.display = "none";
+            console.log(this.cartOnOff.current.style)
         }
 
         return(
@@ -18,7 +20,7 @@ class Category extends Component{
                 <Navbar/>
                 <h2 className="header">Category name</h2>
                 <div className="product-container">
-                    <Product handleMouseEnter={handleMouseEnter} photo={wool} productName='wool hood' productPrice='$50.00'/>
+                    <Product ref={this.cartOnOff} handleMouseEnter={handleMouseEnter} photo={wool} productName='wool hood' productPrice='$50.00'/>
                     <Product photo={wool} productName='wool hood' productPrice='$50.00'/>
                     <Product photo={wool} productName='wool hood' productPrice='$50.00'/>
                     <Product photo={wool} productName='wool hood' productPrice='$50.00'/>
