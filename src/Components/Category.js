@@ -19,7 +19,7 @@ class Category extends Component{
                     <Product photo={wool} productName='wool hood' productPrice='$50.00'/>
                 </div>
             </div>
-        )
+        );
     }
 }
 
