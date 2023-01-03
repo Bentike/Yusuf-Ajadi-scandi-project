@@ -13,17 +13,18 @@ nav{
     list-style-type: none;
 }
 
-.nav-items li {
-    margin: 0 20px;
-    text-transform: uppercase;
-    transition: all ease-in-out .1s;
-    padding-bottom: 10px;
+.nav-items .list {
+    margin: 0 20px !important;
+    text-transform: uppercase !important;
+    transition: all ease-in-out .1s !important;
+    padding-bottom: 10px !important;
+    text-decoration: none !important;
 }
 
-.nav-items li:hover{
-    color: #5ECE7B; 
-    border-bottom: 2px solid #5ECE7B;
-    cursor: pointer;
+.nav-items .list:hover{
+    color: #5ECE7B !important; 
+    border-bottom: 2px solid #5ECE7B !important;
+    cursor: pointer !important;
 }
 
 .cart-div{
