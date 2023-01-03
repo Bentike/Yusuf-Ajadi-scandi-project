@@ -6,4 +6,10 @@
 .product-wrap{
     padding: 10px;
     margin: 20px 50px;
+    transition: all ease-in-out .2s;
+}
+
+.product-wrap:hover{
+    transform: scale(1.03);
+    box-shadow: 3px 3px 12px rgb(235, 232, 232);
 }
