@@ -3,15 +3,25 @@ import cart from '../Images/cart.png';
 import '../Styles/Product.css';
 
 class Product extends Component{
+    constructor(props){
+       super(props);
+       this.cartRef = React.createRef();
+    }
+
     render(){
-        const {photo, productName, productPrice, handleMouseEnter, handleMouseLeave} = this.props;
+        const handleMouseEnter = () => {
+            let myCart = this.cartRef.current;
+            myCart.style.display = "block";
+        }
+
+        const {photo, productName, productPrice} = this.props;
 
         return(
-            <div className="product-wrap" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <div className="product-wrap" onMouseEnter={handleMouseEnter}>
                  <img className="product-img" src={photo} alt="product"/>
                  <p>{productName}</p>
                  <p>{productPrice}</p>
-                 <img id="cart" src={cart} alt="add to cart"/>
+                 <img id="cart" src={cart} alt="add to cart" ref={this.cartRef}/>
             </div>
         );
     }
