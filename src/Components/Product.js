@@ -9,15 +9,19 @@ class Product extends Component{
     }
 
     render(){
+
         const handleMouseEnter = () => {
-            let myCart = this.cartRef.current;
-            myCart.style.display = "block";
+            this.cartRef.current.style.display = "block";
+        }
+
+        const handleMouseLeave = () => {
+            this.cartRef.current.style.display = "none";
         }
 
         const {photo, productName, productPrice} = this.props;
 
         return(
-            <div className="product-wrap" onMouseEnter={handleMouseEnter}>
+            <div className="product-wrap" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                  <img className="product-img" src={photo} alt="product"/>
                  <p>{productName}</p>
                  <p>{productPrice}</p>
