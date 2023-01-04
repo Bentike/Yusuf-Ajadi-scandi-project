@@ -15,10 +15,7 @@
     bottom: 40px;
     right: 20px;
     display: none;
-}
-
-.on{
-    display: block !important;
+    transition: all ease-in-out 5s;
 }
 
 .product-wrap:hover{
