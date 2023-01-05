@@ -1,13 +1,22 @@
 import React, {Component} from "react";
 import Navbar from "./Navbar";
 import Product from "./Product";
+import wool from '../Images/wool.png';
 
 class Kids extends Component{
     render(){
         return(
-            <div>
+            <div className="category">
                 <Navbar/>
-                <h1>Kids Category</h1>
+                <h2 className="header">Kids Category</h2>
+                <div className="product-container">
+                    <Product photo={wool} productName='wool hood' productPrice='$50.00'/>
+                    <Product photo={wool} productName='wool hood' productPrice='$50.00'/>
+                    <Product photo={wool} productName='wool hood' productPrice='$50.00'/>
+                    <Product photo={wool} productName='wool hood' productPrice='$50.00'/>
+                    <Product photo={wool} productName='wool hood' productPrice='$50.00'/>
+                    <Product photo={wool} productName='wool hood' productPrice='$50.00'/>
+                </div>
             </div>
         );
     }

@@ -6,7 +6,7 @@ import wool from '../Images/wool.png';
 class Men extends Component{
     render(){
         return(
-            <div>
+            <div className="category">
                 <Navbar/>
                 <h2 className="header">Men Category</h2>
                 <div className="product-container">
