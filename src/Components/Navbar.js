@@ -5,7 +5,21 @@ import cart from '../Images/cart-logo.png';
 import '../Styles/Navbar.css';
 
 class Navbar extends Component{
+   constructor(props){
+      super(props);
+      this.amountRef = React.createRef();
+   }
+
     render(){
+      
+      const handleMouseEnter = () => {
+         this.amountRef.current.style.display = "block";
+      }
+
+      const handleMouseLeave = () => {
+         this.amountRef.current.style.display = "none";
+      }
+
         return(
            <nav>
              <div className="nav-div">
