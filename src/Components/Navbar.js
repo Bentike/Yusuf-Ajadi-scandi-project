@@ -28,8 +28,9 @@ class Navbar extends Component{
                      <option value="NGN">$ EUR</option>
                   </select>  
                 </div>
-                <div>
+                <div className="cart-amount">
                   <img src={cart} alt="cart-logo"/>
+                  <p className="amount">3</p>
                 </div>
              </div> 
            </nav>

@@ -47,3 +47,23 @@ select.decorated option:hover {
     width: 15%;
     margin: 0 auto;
 }
+
+.cart-amount{
+    position: relative;
+}
+
+.amount{
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #000;
+    color: #fff;
+    padding: 4px;
+    font-size: 12px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-weight: bolder;
+    display: none;
+}
