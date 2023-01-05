@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Navbar from "./Navbar";
+import Product from "./Product";
 
 class Kids extends Component{
     render(){
