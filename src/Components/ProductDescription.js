@@ -7,7 +7,7 @@ import SizeAndColor from "./SizeAndColor";
 class ProductDescription extends Component{
     render(){
         return(
-            <div>
+            <div className="category">
                 <Navbar/>
                 <div className="product">
                     <div className="product-wrapper">

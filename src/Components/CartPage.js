@@ -7,7 +7,7 @@ import '../Styles/Cart.css';
 class CartPage extends Component{
     render(){
         return(
-            <div>
+            <div className="category">
                 <Navbar/>
                 <h2 className="cart-header">CART</h2>
                 <hr/>
