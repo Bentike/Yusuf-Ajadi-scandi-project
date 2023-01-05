@@ -42,9 +42,9 @@ class Navbar extends Component{
                      <option value="NGN">$ EUR</option>
                   </select>  
                 </div>
-                <div className="cart-amount">
+                <div className="cart-amount" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                   <img src={cart} alt="cart-logo"/>
-                  <p className="amount">3</p>
+                  <p className="amount" ref={this.amountRef}>3</p>
                 </div>
              </div> 
            </nav>
