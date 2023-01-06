@@ -12,15 +12,7 @@ class Navbar extends Component{
    }
 
     render(){
-      
-      const optionMouseEnter = () => {
-         this.optionRef.current.style.background = "gray";
-      }
-
-      const optionMouseLeave = () => {
-         this.optionRef.current.style.background = "white";
-      }
-
+   
       const handleMouseEnter = () => {
          this.amountRef.current.style.display = "block";
       }
@@ -46,9 +38,9 @@ class Navbar extends Component{
              <div className="cart-div">
                 <div>
                   <select name="currency">
-                     <option value="USD" ref={this.optionRef}>$ USD</option>
-                     <option value="NGN" ref={this.optionRef}># NGN</option>
-                     <option value="NGN" ref={this.optionRef}>$ EUR</option>
+                     <option value="USD">$ USD</option>
+                     <option value="NGN"># NGN</option>
+                     <option value="EUR">$ EUR</option>
                   </select>  
                 </div>
                 <div className="cart-amount" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
