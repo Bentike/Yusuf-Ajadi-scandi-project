@@ -8,7 +8,6 @@ class Navbar extends Component{
    constructor(props){
       super(props);
       this.amountRef = React.createRef();
-      this.optionRef = React.createRef();
    }
 
     render(){
