@@ -46,9 +46,9 @@ class Navbar extends Component{
              <div className="cart-div">
                 <div>
                   <select name="currency">
-                     <option value="USD">$ USD</option>
-                     <option value="NGN"># NGN</option>
-                     <option value="NGN">$ EUR</option>
+                     <option value="USD" ref={this.optionRef}>$ USD</option>
+                     <option value="NGN" ref={this.optionRef}># NGN</option>
+                     <option value="NGN" ref={this.optionRef}>$ EUR</option>
                   </select>  
                 </div>
                 <div className="cart-amount" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
