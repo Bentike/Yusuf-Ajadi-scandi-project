@@ -13,6 +13,14 @@ class Navbar extends Component{
 
     render(){
       
+      const optionMouseEnter = () => {
+         this.optionRef.current.style.background = "gray";
+      }
+
+      const optionMouseLeave = () => {
+         this.optionRef.current.style.background = "white";
+      }
+
       const handleMouseEnter = () => {
          this.amountRef.current.style.display = "block";
       }
