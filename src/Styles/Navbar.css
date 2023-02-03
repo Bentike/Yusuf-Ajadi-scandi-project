@@ -5,6 +5,7 @@ nav{
     justify-content: space-between;
     padding: 25px  50px;
     padding-bottom: 10px;
+    height: 50px;
 }
 
 .nav-items{
@@ -40,8 +41,8 @@ select{
 }
 
 .converter{
-    width: 15%;
-    margin: 0 auto;
+   width: 70%;   
+   margin-top: -10px;
 }
 
 .cart-amount{

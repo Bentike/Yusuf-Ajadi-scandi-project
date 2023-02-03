@@ -40,8 +40,8 @@ class Navbar extends Component{
                 </ul>
              </div>
 
-             <div className="converter">
-                <img src={logo} alt='convereter'/>
+             <div className="convert">
+                <img className="converter" src={logo} alt='convereter'/>
              </div>
 
              <div className="cart-div">
