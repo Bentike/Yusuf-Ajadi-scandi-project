@@ -70,4 +70,9 @@ select{
     background-color: #000;
     opacity: .1;
     display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: 10;
 }
