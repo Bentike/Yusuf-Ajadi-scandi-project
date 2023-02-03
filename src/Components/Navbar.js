@@ -8,6 +8,7 @@ class Navbar extends Component{
    constructor(props){
       super(props);
       this.amountRef = React.createRef();
+      this.overlayRef = React.createRef();
    }
 
     render(){
@@ -18,6 +19,14 @@ class Navbar extends Component{
 
       const handleMouseLeave = () => {
          this.amountRef.current.style.display = "none";
+      }
+
+      const showOverlay = () => {
+         this.overlayRef.current.style.display = "block";
+      }
+
+      const hideOverlay = () => {
+         this.overlayRef.current.style.display = "none";
       }
 
         return(
