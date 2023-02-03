@@ -43,8 +43,10 @@ class Navbar extends Component{
                   </select>  
                 </div>
                 <div className="cart-amount" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                  <img src={cart} alt="cart-logo"/>
-                  <p className="amount" ref={this.amountRef}>3</p>
+                  <NavLink to="/cart">
+                     <img src={cart} alt="cart-logo"/>
+                     <p className="amount" ref={this.amountRef}>3</p>
+                  </NavLink>   
                 </div>
              </div> 
            </nav>
