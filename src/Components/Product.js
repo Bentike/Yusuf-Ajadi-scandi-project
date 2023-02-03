@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { NavLink } from "react-router-dom";
 import cart from '../Images/cart.png';
 import '../Styles/Product.css';
 
