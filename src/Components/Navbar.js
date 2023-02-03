@@ -30,6 +30,7 @@ class Navbar extends Component{
       }
 
         return(
+          <div>
            <nav>
              <div className="nav-div">
                 <ul  className="nav-items">
@@ -52,13 +53,17 @@ class Navbar extends Component{
                   </select>  
                 </div>
                 <div className="cart-amount" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                  <NavLink to="/cart">
+                  <NavLink to="/cart" onMouseEnter={showOverlay} onMouseLeave={hideOverlay}>
                      <img src={cart} alt="cart-logo"/>
                      <p className="amount" ref={this.amountRef}>3</p>
                   </NavLink>   
                 </div>
              </div> 
            </nav>
+           <div className="overlay" ref={this.overlayRef}>
+                  overlay
+           </div>
+         </div>  
         );
     }
 }
