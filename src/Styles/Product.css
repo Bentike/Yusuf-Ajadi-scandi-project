@@ -22,3 +22,8 @@
     transform: scale(1.03);
     box-shadow: 3px 3px 12px rgb(235, 232, 232);
 }
+
+.prod{
+    text-decoration: none;
+    color: #000;
+}
