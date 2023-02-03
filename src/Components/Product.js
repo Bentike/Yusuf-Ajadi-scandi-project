@@ -23,10 +23,12 @@ class Product extends Component{
 
         return(
             <div className="product-wrap" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                <NavLink to="/product">
                  <img className="product-img" src={photo} alt="product"/>
                  <p>{productName}</p>
                  <p>{productPrice}</p>
                  <img id="cart" src={cart} alt="add to cart" ref={this.cartRef}/>
+                </NavLink> 
             </div>
         );
     }
