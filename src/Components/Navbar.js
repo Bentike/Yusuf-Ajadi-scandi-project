@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import logo from '../Images/a-logo.png';
 import cart from '../Images/cart-logo.png';
 import '../Styles/Navbar.css';
+import CartItem from "./CartItem";
 
 class Navbar extends Component{
    constructor(props){
@@ -61,7 +62,9 @@ class Navbar extends Component{
              </div> 
            </nav>
            <div className="overlay" ref={this.overlayRef}>
-                  overlay
+                  <div>
+                      <CartItem/>
+                  </div>
            </div>
          </div>  
         );
