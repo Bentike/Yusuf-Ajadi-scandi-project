@@ -16,9 +16,9 @@ class CartItem extends Component {
                     </div>
                     <div className="item-image-wrap">
                         <div className="item-image">
-                            <button className="cart-btn">+</button>
-                            <button className="quantity">1</button>
-                            <button className="cart-btn">-</button>
+                            <button className="cart-btn"><span className="text">+</span></button>
+                            <button className="quantity"><span className="text">1</span></button>
+                            <button className="cart-btn"><span className="text">-</span></button>
                         </div>
                         <div>
                             <img className="product-display" src={wool} alt="wool"/>
