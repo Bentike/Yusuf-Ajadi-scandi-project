@@ -4,6 +4,7 @@ import logo from '../Images/a-logo.png';
 import cart from '../Images/cart-logo.png';
 import '../Styles/Navbar.css';
 import CartItem from "./CartItem";
+import OverlayCart from "./OverlayCart";
 
 class Navbar extends Component{
    constructor(props){
@@ -63,7 +64,7 @@ class Navbar extends Component{
            </nav>
            <div className="overlay" ref={this.overlayRef}></div>
            <div className="overlay-card">
-            
+             <OverlayCart/>
            </div>
          </div>  
         );
