@@ -1,6 +1,23 @@
+.overlayCartWrap, .controlWrap{
+   display: flex;
+   justify-content: space-between;
+}
+
 .overlayCartImg{
     width: 100px;
     height: 100px;
+}
+
+.cartOverlayItemName{
+    font-size: 14px;
+    line-height: 1.5em;
+    font-weight: lighter;
+    margin-bottom: 5px;
+}
+
+.cartOverlayPrice{
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
 .overlayCartBtn{
