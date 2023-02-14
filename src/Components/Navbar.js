@@ -63,7 +63,7 @@ class Navbar extends Component{
            </nav>
            <div className="overlay" ref={this.overlayRef}></div>
            <div className="overlay-card">
-              <CartItem/>
+            
            </div>
          </div>  
         );
