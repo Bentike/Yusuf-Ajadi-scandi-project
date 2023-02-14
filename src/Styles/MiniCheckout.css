@@ -1,0 +1,10 @@
+.totalWrap{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.miniBtnWrap{
+    display: flex;
+    justify-content: space-between;
+}
