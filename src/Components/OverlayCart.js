@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../Styles/OverlayCart.css";
+import MiniCheckout from "./MiniCheckout";
 import photo from "../Images/wool.png"
 
 class OverlayCart extends Component {
@@ -38,6 +39,7 @@ class OverlayCart extends Component {
               </div>
           </div>
         </div>
+        <MiniCheckout/>
       </div>
     );
   }
