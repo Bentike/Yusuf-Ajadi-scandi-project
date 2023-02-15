@@ -17,6 +17,12 @@
     width: 40%;
 }
 
+
+.viewBag a {
+    text-decoration: none;
+    color: #000;
+}
+
 .miniCheckoutBtn{
     width: 40%;
     font-size: 10px;
