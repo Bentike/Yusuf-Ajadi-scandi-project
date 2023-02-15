@@ -6,7 +6,7 @@ import photo from "../Images/wool.png"
 class OverlayCart extends Component {
   render() {
     return (
-      <div>
+      <div className="miniCartWrap">
         <h5 className="myBag">
           My Bag,<span className="overlayCartItem"> 3 items</span>
         </h5>
