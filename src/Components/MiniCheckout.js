@@ -12,7 +12,9 @@ class MiniCheckout extends Component {
         </div>
         <div className="miniBtnWrap">
           <button className="viewBag">
-            <NavLink to="/cart">VIEW BAG</NavLink>
+            <NavLink to="/cart">
+              VIEW BAG
+            </NavLink>
           </button>
           <button className="miniCheckoutBtn">CHECKOUT</button>
         </div>
