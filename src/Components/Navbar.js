@@ -9,7 +9,6 @@ class Navbar extends Component {
   constructor(props) {
     super(props);
     this.amountRef = React.createRef();
-    this.overlayRef = React.createRef();
     this.state = {
        overlay: false
     }
