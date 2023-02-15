@@ -10,6 +10,9 @@ class Navbar extends Component {
     super(props);
     this.amountRef = React.createRef();
     this.overlayRef = React.createRef();
+    this.state = {
+       overlay: ""
+    }
   }
 
   render() {
@@ -22,7 +25,7 @@ class Navbar extends Component {
     };
 
     const showOverlay = () => {
-      this.overlayRef.current.style.display = "block";
+       console.log(this.state.overlay)
     };
 
     return (
@@ -59,9 +62,7 @@ class Navbar extends Component {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <NavLink
-                onClick={showOverlay}
-              >
+              <NavLink onClick={showOverlay}>
                 <img src={cart} alt="cart-logo" />
                 <p className="amount" ref={this.amountRef}>
                   3
@@ -70,7 +71,7 @@ class Navbar extends Component {
             </div>
           </div>
         </nav>
-        <div className="overlay" ref={this.overlayRef}>
+        <div className="overlay" style={{display: this.state.overlay}}>
           <div className="overlay-card">
             <OverlayCart />
           </div>
