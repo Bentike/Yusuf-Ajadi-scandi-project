@@ -80,7 +80,7 @@ select{
 
 .overlay-card{
     width: 20%;
-    background-color: red;
+    background-color: #fff;
     position: absolute;
     right: 100px;
     z-index: 5;
