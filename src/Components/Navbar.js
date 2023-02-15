@@ -25,10 +25,6 @@ class Navbar extends Component {
       this.overlayRef.current.style.display = "block";
     };
 
-    const hideOverlay = () => {
-      this.overlayRef.current.style.display = "none";
-    };
-
     return (
       <div>
         <nav>
