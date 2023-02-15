@@ -64,8 +64,7 @@ class Navbar extends Component {
               onMouseLeave={handleMouseLeave}
             >
               <NavLink
-                onMouseEnter={showOverlay}
-                onMouseLeave={hideOverlay}
+                onClick={showOverlay}
               >
                 <img src={cart} alt="cart-logo" />
                 <p className="amount" ref={this.amountRef}>
