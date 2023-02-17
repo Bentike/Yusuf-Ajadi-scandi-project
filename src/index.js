@@ -11,7 +11,7 @@ import "./index.css";
 import App from "./App";
 
 const client = new ApolloClient({
-  uri: "https://flyby-gateway.herokuapp.com/",
+  uri: "http://localhost:4000/",
   cache: new InMemoryCache(),
 });
 
