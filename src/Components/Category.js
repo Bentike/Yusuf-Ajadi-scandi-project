@@ -4,6 +4,17 @@ import Navbar from "./Navbar";
 import '../Styles/Category.css';
 import wool from '../Images/wool.png';
 
+const GET_PRODUCTS = gql`
+  query GetLocations {
+    locations {
+      id
+      name
+      description
+      photo
+    }
+  }
+`;
+
 class Category extends Component{
     render(){
         return(
