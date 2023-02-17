@@ -7,17 +7,6 @@ import Kids from './Components/Kids';
 import Men from './Components/Men';
 import './App.css';
 
-const GET_PRODUCTS = gql`
-  query GetLocations {
-    locations {
-      id
-      name
-      description
-      photo
-    }
-  }
-`;
-
 function App() {
   return (
     <Routes>
