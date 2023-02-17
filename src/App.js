@@ -1,5 +1,6 @@
 import Category from './Components/Category';
 import {Routes, Route} from 'react-router-dom';
+import { useQuery, gql } from '@apollo/client';
 import ProductDescription from './Components/ProductDescription';
 import CartPage from './Components/CartPage';
 import Kids from './Components/Kids';
