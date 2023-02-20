@@ -28,7 +28,7 @@ class Category extends Component {
       }),
     })
       .then((res) => res.json())
-      .then((res) => console.log(res.data));
+      .then((res) => console.log(res.data.categories[0]));
   }
 
   render() {
