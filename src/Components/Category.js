@@ -8,19 +8,21 @@ import wool from "../Images/wool.png";
 class Category extends Component {
   componentDidMount() {
     fetch("http://localhost:4000", {
-      method: "GET",
+      method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         query: `
           query {
-            todos {
-              edges {
-                node {
-                  completed
-                  id
-                  text
-                }
-          }
+            categories{
+              name
+              products{
+                id
+                name
+                inStock
+                category
+                brand
+                gallery
+              }
             }
           }`,
       }),
