@@ -13,22 +13,15 @@ class Category extends Component {
       body: JSON.stringify({
         query: `
           query {
-            categories{
-              name
-              products{
-                id
-                name
-                inStock
-                category
-                brand
-                gallery
-              }
-            }
+            currencies{
+    label
+    symbol
+  }
           }`,
       }),
     })
       .then((res) => res.json())
-      .then((res) => console.log(res.data.categories[0]));
+      .then((res) => console.log(res.data.currencies));
   }
 
   render() {
