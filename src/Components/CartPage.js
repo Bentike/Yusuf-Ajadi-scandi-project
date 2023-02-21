@@ -8,7 +8,7 @@ class CartPage extends Component{
     render(){
         return(
             <div className="category">
-                <Navbar/>
+                <Navbar currencies={this.props.currencies}/>
                 <h2 className="cart-header">CART</h2>
                 <hr/>
                   <CartItem/>

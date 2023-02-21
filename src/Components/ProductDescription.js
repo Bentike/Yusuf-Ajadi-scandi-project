@@ -8,7 +8,7 @@ class ProductDescription extends Component{
     render(){
         return(
             <div className="category">
-                <Navbar/>
+                <Navbar currencies={this.props.currencies}/>
                 <div className="product">
                     <div className="product-wrapper">
                         <div className="product-bar">

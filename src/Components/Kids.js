@@ -7,7 +7,7 @@ class Kids extends Component{
     render(){
         return(
             <div className="category">
-                <Navbar/>
+                <Navbar currencies={this.props.currencies}/>
                 <h2 className="header">Kids Category</h2>
                 <div className="product-container">
                     <Product photo={wool} productName='wool hood' productPrice='$50.00'/>
