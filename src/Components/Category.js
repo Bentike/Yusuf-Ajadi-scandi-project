@@ -6,6 +6,35 @@ import "../Styles/Category.css";
 import wool from "../Images/wool.png";
 
 class Category extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+       currencies: []
+    }
+  }
+
+  componentDidMount() {
+    fetch("http://localhost:4000", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        query: `
+          query {
+            currencies{
+                label
+                symbol
+            }
+          }`,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+         this.setState({
+           currencies: res.data.currencies
+         })
+      })
+      .catch(err => console.log(err));   
+  }
  
   render() {
     return (
