@@ -8,6 +8,12 @@ import Men from './Components/Men';
 import './App.css';
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      currencies: []
+    }
+  }
   render() {
     return (
       <Routes>
