@@ -53,9 +53,9 @@ class Navbar extends Component {
           <div className="cart-div">
             <div>
               <select name="currency">
-                <option value="USD">$ USD</option>
-                <option value="NGN"># NGN</option>
-                <option value="EUR">$ EUR</option>
+               {this.props.currencies.map((currency) => {
+                  return <option key={currency.label}>{currency.symbol}</option>
+               })}
               </select>
             </div>
             <div

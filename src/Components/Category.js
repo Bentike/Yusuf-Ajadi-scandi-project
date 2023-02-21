@@ -6,11 +6,11 @@ import "../Styles/Category.css";
 import wool from "../Images/wool.png";
 
 class Category extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-       currencies: []
-    }
+      currencies: [],
+    };
   }
 
   componentDidMount() {
@@ -29,17 +29,17 @@ class Category extends Component {
     })
       .then((res) => res.json())
       .then((res) => {
-         this.setState({
-           currencies: res.data.currencies
-         })
+        this.setState({
+          currencies: res.data.currencies,
+        });
       })
-      .catch(err => console.log(err));   
+      .catch((err) => console.log(err));
   }
- 
+
   render() {
     return (
       <div className="category">
-        <Navbar />
+        <Navbar currencies={this.state.currencies} />
         <h2 className="header">Women Category</h2>
         <div className="product-container">
           <Product photo={wool} productName="wool hood" productPrice="$50.00" />
