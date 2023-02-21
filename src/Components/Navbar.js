@@ -54,7 +54,7 @@ class Navbar extends Component {
             <div>
               <select name="currency">
                {this.props.currencies.map((currency) => {
-                  return <option key={currency.label}>{currency.symbol}</option>
+                  return <option key={currency.label} value={currency.symbol}>{currency.label}</option>
                })}
               </select>
             </div>
