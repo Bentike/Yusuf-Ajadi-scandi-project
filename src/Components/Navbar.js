@@ -10,8 +10,8 @@ class Navbar extends Component {
     super(props);
     this.amountRef = React.createRef();
     this.state = {
-       overlay: false
-    }
+      overlay: false,
+    };
   }
 
   render() {
@@ -24,9 +24,9 @@ class Navbar extends Component {
     };
 
     const showOverlay = () => {
-       this.setState(prevState => ({
-         overlay: !prevState.overlay
-       }))
+      this.setState((prevState) => ({
+        overlay: !prevState.overlay,
+      }));
     };
 
     return (
@@ -72,7 +72,10 @@ class Navbar extends Component {
             </div>
           </div>
         </nav>
-        <div className="overlay" style={{display: this.state.overlay? "block" : "none"}}>
+        <div
+          className="overlay"
+          style={{ display: this.state.overlay ? "block" : "none" }}
+        >
           <div className="overlay-card">
             <OverlayCart />
           </div>
