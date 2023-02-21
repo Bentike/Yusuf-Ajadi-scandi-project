@@ -6,24 +6,7 @@ import "../Styles/Category.css";
 import wool from "../Images/wool.png";
 
 class Category extends Component {
-  componentDidMount() {
-    fetch("http://localhost:4000", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        query: `
-          query {
-            currencies{
-    label
-    symbol
-  }
-          }`,
-      }),
-    })
-      .then((res) => res.json())
-      .then((res) => console.log(res.data.currencies));
-  }
-
+ 
   render() {
     return (
       <div className="category">
