@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { useQuery, gql } from "@apollo/client";
 import Product from "./Product";
 import Navbar from "./Navbar";
 import "../Styles/Category.css";
