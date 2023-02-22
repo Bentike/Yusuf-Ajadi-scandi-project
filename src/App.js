@@ -3,9 +3,10 @@ import Category from './Components/Category';
 import {Routes, Route} from 'react-router-dom';
 import ProductDescription from './Components/ProductDescription';
 import CartPage from './Components/CartPage';
-import Kids from './Components/Kids';
+import Kids from './Components/Clothes';
 import Men from './Components/Men';
 import './App.css';
+import Clothes from './Components/Clothes';
 
 class App extends Component {
   constructor(props){
@@ -77,7 +78,7 @@ class App extends Component {
           <Route path='/' element={<Category currencies={this.state.currencies} />}/>
           <Route path='all' element={<Category currencies={this.state.currencies} />}/>
           <Route path='tech' element={<Men currencies={this.state.currencies} />}/>
-          <Route path='clothes' element={<Kids currencies={this.state.currencies} />}/>
+          <Route path='clothes' element={<Clothes currencies={this.state.currencies} />}/>
           <Route path='product' element={<ProductDescription currencies={this.state.currencies} />}/>
           <Route path='cart' element={<CartPage currencies={this.state.currencies} />}/>
       </Routes>
