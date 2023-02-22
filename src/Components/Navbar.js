@@ -34,7 +34,7 @@ class Navbar extends Component {
         <nav>
           <div className="nav-div">
             <ul className="nav-items">
-              <NavLink className="list" to="/all">
+              <NavLink className="list" to="/">
                 ALL
               </NavLink>
               <NavLink className="list" to="/tech">
