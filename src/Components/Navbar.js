@@ -34,13 +34,13 @@ class Navbar extends Component {
         <nav>
           <div className="nav-div">
             <ul className="nav-items">
-              <NavLink className="list" to="/women">
+              <NavLink className="list" to="/all">
                 ALL
               </NavLink>
-              <NavLink className="list" to="/men">
+              <NavLink className="list" to="/tech">
                 TECH
               </NavLink>
-              <NavLink className="list" to="/kids">
+              <NavLink className="list" to="/clothes">
                 CLOTHES
               </NavLink>
             </ul>
