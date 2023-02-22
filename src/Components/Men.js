@@ -8,7 +8,7 @@ class Men extends Component{
         return(
             <div className="category">
                 <Navbar currencies={this.props.currencies}/>
-                <h2 className="header">Men Category</h2>
+                <h2 className="header">Tech Category</h2>
                 <div className="product-container">
                     <Product photo={wool} productName='wool hood' productPrice='$50.00'/>
                     <Product photo={wool} productName='wool hood' productPrice='$50.00'/>
