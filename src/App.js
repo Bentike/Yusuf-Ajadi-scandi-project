@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Category from './Components/Category';
+import AllCategories from './Components/AllCategories';
 import {Routes, Route} from 'react-router-dom';
 import ProductDescription from './Components/ProductDescription';
 import CartPage from './Components/CartPage';
@@ -74,7 +74,7 @@ class App extends Component {
   render() {
     return (
       <Routes>
-          <Route path='/' element={<Category currencies={this.state.currencies} />}/>
+          <Route path='/' element={<AllCategories currencies={this.state.currencies} />}/>
           <Route path='tech' element={<Tech currencies={this.state.currencies} />}/>
           <Route path='clothes' element={<Clothes currencies={this.state.currencies} />}/>
           <Route path='product' element={<ProductDescription currencies={this.state.currencies} />}/>

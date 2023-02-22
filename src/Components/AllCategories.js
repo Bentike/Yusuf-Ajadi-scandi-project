@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 import "../Styles/Category.css";
 import wool from "../Images/wool.png";
 
-class Category extends Component {
+class AllCategories extends Component {
   constructor(props) {
     super(props);
   }
@@ -28,4 +28,4 @@ class Category extends Component {
   }
 }
 
-export default Category;
+export default AllCategories;
