@@ -75,7 +75,6 @@ class App extends Component {
     return (
       <Routes>
           <Route path='/' element={<Category currencies={this.state.currencies} />}/>
-          <Route path='all' element={<Category currencies={this.state.currencies} />}/>
           <Route path='tech' element={<Tech currencies={this.state.currencies} />}/>
           <Route path='clothes' element={<Clothes currencies={this.state.currencies} />}/>
           <Route path='product' element={<ProductDescription currencies={this.state.currencies} />}/>
