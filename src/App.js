@@ -44,7 +44,7 @@ class App extends Component {
         body: JSON.stringify({
           query: `
             query {
-              category{
+              categories{
                 name
                 products{
                   id
@@ -53,6 +53,16 @@ class App extends Component {
                   gallery
                   description
                   category
+                  attributes{
+                    id
+                    name
+                    type
+                    items{
+                      displayValue
+                      value
+                      id
+                    }
+                  }
                   prices{
                      currency{
                         label
@@ -67,7 +77,7 @@ class App extends Component {
         }),
       })
         .then((res) => res.json())
-        .then((res) => { console.log(res.data.category.products)})
+        .then((res) => { console.log(res.data.categories)})
         .catch((err) => console.log(err));   
   }
 
