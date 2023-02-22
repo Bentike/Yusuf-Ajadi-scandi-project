@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Product from "./Product";
 import wool from '../Images/wool.png';
 
-class Men extends Component{
+class Tech extends Component{
     render(){
         return(
             <div className="category">
@@ -22,4 +22,4 @@ class Men extends Component{
     }
 }
 
-export default Men;
+export default Tech;
