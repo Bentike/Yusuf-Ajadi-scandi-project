@@ -4,8 +4,7 @@ import Navbar from "./Navbar";
 import "../Styles/Category.css";
 import wool from "../Images/wool.png";
 
-class AllCategories extends Component {
- 
+class AllCategories extends Component { 
   render() {
     return (
       <div className="category">

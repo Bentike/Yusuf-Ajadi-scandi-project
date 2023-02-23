@@ -12,7 +12,9 @@ class App extends Component {
     super(props);
     this.state = {
       currencies: [],
-      products: [],
+      allProducts: [],
+      techProducts: [],
+      clotheProducts: []
     };
   }
 
@@ -78,7 +80,11 @@ class App extends Component {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res.data.categories);
+        this.setState({
+           allProducts: res.data.categories[0],
+           techProducts: res.data.categories[1],
+           clotheProducts: res.data.categories[2]
+        })
       })
       .catch((err) => console.log(err));
   }
