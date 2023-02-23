@@ -5,10 +5,7 @@ import "../Styles/Category.css";
 import wool from "../Images/wool.png";
 
 class AllCategories extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+ 
   render() {
     return (
       <div className="category">

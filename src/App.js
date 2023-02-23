@@ -1,19 +1,19 @@
-import React, {Component} from 'react';
-import AllCategories from './Components/AllCategories';
-import {Routes, Route} from 'react-router-dom';
-import ProductDescription from './Components/ProductDescription';
-import CartPage from './Components/CartPage';
-import Clothes from './Components/Clothes';
-import Tech from './Components/Tech';
-import './App.css';
+import React, { Component } from "react";
+import AllCategories from "./Components/AllCategories";
+import { Routes, Route } from "react-router-dom";
+import ProductDescription from "./Components/ProductDescription";
+import CartPage from "./Components/CartPage";
+import Clothes from "./Components/Clothes";
+import Tech from "./Components/Tech";
+import "./App.css";
 
 class App extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
       currencies: [],
-      products: []
-    }
+      products: [],
+    };
   }
 
   componentDidMount() {
@@ -38,11 +38,11 @@ class App extends Component {
       })
       .catch((err) => console.log(err));
 
-      fetch("http://localhost:4000", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          query: `
+    fetch("http://localhost:4000", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        query: `
             query {
               categories{
                 name
@@ -74,24 +74,41 @@ class App extends Component {
                 }
               }
             }`,
-        }),
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res.data.categories);
       })
-        .then((res) => res.json())
-        .then((res) => { console.log(res.data.categories)})
-        .catch((err) => console.log(err));   
+      .catch((err) => console.log(err));
   }
 
   render() {
     return (
       <Routes>
-          <Route path='/' element={<AllCategories currencies={this.state.currencies} />}/>
-          <Route path='tech' element={<Tech currencies={this.state.currencies} />}/>
-          <Route path='clothes' element={<Clothes currencies={this.state.currencies} />}/>
-          <Route path='product' element={<ProductDescription currencies={this.state.currencies} />}/>
-          <Route path='cart' element={<CartPage currencies={this.state.currencies} />}/>
+        <Route
+          path="/"
+          element={<AllCategories currencies={this.state.currencies} />}
+        />
+        <Route
+          path="tech"
+          element={<Tech currencies={this.state.currencies} />}
+        />
+        <Route
+          path="clothes"
+          element={<Clothes currencies={this.state.currencies} />}
+        />
+        <Route
+          path="product"
+          element={<ProductDescription currencies={this.state.currencies} />}
+        />
+        <Route
+          path="cart"
+          element={<CartPage currencies={this.state.currencies} />}
+        />
       </Routes>
     );
-  } 
+  }
 }
 
 export default App;
