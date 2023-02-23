@@ -19,15 +19,10 @@ class Product extends Component{
             this.cartRef.current.style.display = "none";
         }
 
-        const handleProductClick = () => {
-            console.log("this product has been clicked");
-            console.log(this.props)
-        }
-
         const {photo, productName, productPrice} = this.props;
 
         return(
-            <div className="product-wrap" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleProductClick}>
+            <div className="product-wrap" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={this.props.handleProductClick}>
                 <NavLink className="prod" to="/product">
                  <img className="product-img" src={photo} alt="product"/>
                  <p>{productName}</p>
