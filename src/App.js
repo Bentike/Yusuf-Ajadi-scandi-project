@@ -82,12 +82,9 @@ class App extends Component {
       .then((res) => {
         this.setState({
            allProducts: res.data.categories[0].products,
-           techProducts: res.data.categories[1].products,
-           clotheProducts: res.data.categories[2].products
+           techProducts: res.data.categories[2].products,
+           clotheProducts: res.data.categories[1].products
         })
-        // console.log(this.state.allProducts)
-        // console.log(this.state.techProducts)
-        // console.log(this.state.clotheProducts)
       })
       .catch((err) => console.log(err));
   }
@@ -102,7 +99,7 @@ class App extends Component {
         />
         <Route
           path="tech"
-          element={<Tech currencies={this.state.currencies} />}
+          element={<Tech currencies={this.state.currencies} techProducts={this.state.techProducts} />}
         />
         <Route
           path="clothes"
