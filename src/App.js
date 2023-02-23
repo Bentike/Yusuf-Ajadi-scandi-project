@@ -81,20 +81,24 @@ class App extends Component {
       .then((res) => res.json())
       .then((res) => {
         this.setState({
-           allProducts: res.data.categories[0],
-           techProducts: res.data.categories[1],
-           clotheProducts: res.data.categories[2]
+           allProducts: res.data.categories[0].products,
+           techProducts: res.data.categories[1].products,
+           clotheProducts: res.data.categories[2].products
         })
+        // console.log(this.state.allProducts)
+        // console.log(this.state.techProducts)
+        // console.log(this.state.clotheProducts)
       })
       .catch((err) => console.log(err));
   }
 
   render() {
+   
     return (
       <Routes>
         <Route
           path="/"
-          element={<AllCategories currencies={this.state.currencies} />}
+          element={<AllCategories currencies={this.state.currencies} allProducts={this.state.allProducts} />}
         />
         <Route
           path="tech"
