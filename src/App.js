@@ -14,7 +14,8 @@ class App extends Component {
       currencies: [],
       allProducts: [],
       techProducts: [],
-      clotheProducts: []
+      clotheProducts: [],
+      productDescription: []
     };
   }
 
