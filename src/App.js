@@ -103,7 +103,7 @@ class App extends Component {
         />
         <Route
           path="clothes"
-          element={<Clothes currencies={this.state.currencies} />}
+          element={<Clothes currencies={this.state.currencies} clotheProducts={this.state.clotheProducts} />}
         />
         <Route
           path="product"
