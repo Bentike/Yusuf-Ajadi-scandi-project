@@ -15,7 +15,7 @@ class App extends Component {
       allProducts: [],
       techProducts: [],
       clotheProducts: [],
-      productDescription: []
+      productDescription: [],
     };
   }
 
@@ -82,29 +82,49 @@ class App extends Component {
       .then((res) => res.json())
       .then((res) => {
         this.setState({
-           allProducts: res.data.categories[0].products,
-           techProducts: res.data.categories[2].products,
-           clotheProducts: res.data.categories[1].products
-        })
+          allProducts: res.data.categories[0].products,
+          techProducts: res.data.categories[2].products,
+          clotheProducts: res.data.categories[1].products,
+        });
       })
       .catch((err) => console.log(err));
   }
 
   render() {
-   
+    // To Complete writing this function... Insha Allah
+    const handleProductClick = () => {
+      // This function will get the data of the clicked product and pass it to this.state.productDescription
+      // this function will be passed as a prop to Product.js
+    };
+
     return (
       <Routes>
         <Route
           path="/"
-          element={<AllCategories currencies={this.state.currencies} allProducts={this.state.allProducts} />}
+          element={
+            <AllCategories
+              currencies={this.state.currencies}
+              allProducts={this.state.allProducts}
+            />
+          }
         />
         <Route
           path="tech"
-          element={<Tech currencies={this.state.currencies} techProducts={this.state.techProducts} />}
+          element={
+            <Tech
+              currencies={this.state.currencies}
+              techProducts={this.state.techProducts}
+            />
+          }
         />
         <Route
           path="clothes"
-          element={<Clothes currencies={this.state.currencies} clotheProducts={this.state.clotheProducts} />}
+          element={
+            <Clothes
+              currencies={this.state.currencies}
+              clotheProducts={this.state.clotheProducts}
+            />
+          }
         />
         <Route
           path="product"
