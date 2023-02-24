@@ -22,7 +22,7 @@ class Product extends Component{
         const {photo, productName, productPrice} = this.props;
 
         return(
-            <div className="product-wrap" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={() => this.props.handleProductClick()}>
+            <div className="product-wrap" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={() => this.props.handleProductClick(productName)}>
                 <NavLink className="prod" to="/product">
                  <img className="product-img" src={photo} alt="product"/>
                  <p>{productName}</p>

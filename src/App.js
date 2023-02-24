@@ -94,7 +94,7 @@ class App extends Component {
     const handleProductClick = (item) => {
       // This function will get the data of the clicked product and pass it to this.state.productDescription
       // this function will be passed as a prop to Product.jXs
-      console.log("Product Just Got Clicked");
+      console.log(item);
       this.state.allProducts.find((prod) => {
         return prod === item;
       });
@@ -118,6 +118,7 @@ class App extends Component {
             <Tech
               currencies={this.state.currencies}
               techProducts={this.state.techProducts}
+              productClick={handleProductClick}
             />
           }
         />
@@ -127,6 +128,7 @@ class App extends Component {
             <Clothes
               currencies={this.state.currencies}
               clotheProducts={this.state.clotheProducts}
+              productClick={handleProductClick}
             />
           }
         />
