@@ -17,7 +17,7 @@ class Clothes extends Component {
               <Product
                 key={id}
                 photo={image}
-                productName={brand}
+                productName={name}
                 productPrice={price}
                 handleProductClick={this.props.productClick}
               />
