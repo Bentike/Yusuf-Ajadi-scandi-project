@@ -20,6 +20,7 @@ class AllCategories extends Component {
                 photo={image}
                 productName={brand}
                 productPrice={price}
+                handleProductClick={this.props.productClick}
               />
             );
           })}

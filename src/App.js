@@ -93,10 +93,10 @@ class App extends Component {
   render() {
     const handleProductClick = (item) => {
       // This function will get the data of the clicked product and pass it to this.state.productDescription
+      // this function will be passed as a prop to Product.jXs
       this.state.allProducts.find((prod) => {
         return prod === item;
       });
-      // this function will be passed as a prop to Product.jXs
     };
 
     return (
