@@ -7,28 +7,31 @@ import SizeAndColor from "./SizeAndColor";
 class ProductDescription extends Component{
     render(){
         console.log(this.props.product);
+        const {name, brand, gallery, description, prices} = this.props.product;
+        let image = gallery[0];
+        let price = prices[0].amount;
         return(
             <div className="category">
                 <Navbar currencies={this.props.currencies}/>
                 <div className="product">
                     <div className="product-wrapper">
                         <div className="product-bar">
-                            <img className="product-bar-img" src={wool} alt='product'/>
-                            <img className="product-bar-img" src={wool} alt='product'/>
-                            <img className="product-bar-img" src={wool} alt='product'/>
+                            <img className="product-bar-img" src={image} alt='product'/>
+                            <img className="product-bar-img" src={image} alt='product'/>
+                            <img className="product-bar-img" src={image} alt='product'/>
                         </div>
                         <div className="main-product">
-                            <img src={wool} alt='product'/>
+                            <img src={image} alt='product'/>
                         </div>
                     </div>
                     <div className="details">
                         <div className="title">
-                            <h2>Apollo</h2>
-                            <h3>Running Short</h3>
+                            <h2>{name}</h2>
+                            <h3>{brand}</h3>
                         </div>
                        <SizeAndColor/>
                         <h3>Price:</h3>
-                        <p>$50.00</p>
+                        <p>{price}</p>
                         <button>ADD TO CART</button>
                         <div className="description">
                             <p className="description-text">
