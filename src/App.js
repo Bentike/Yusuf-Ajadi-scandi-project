@@ -15,7 +15,7 @@ class App extends Component {
       allProducts: [],
       techProducts: [],
       clotheProducts: [],
-      productDescription: [],
+      selectedProduct: [],
     };
   }
 
@@ -95,9 +95,10 @@ class App extends Component {
       // This function will get the data of the clicked product and pass it to this.state.productDescription
       // this function will be passed as a prop to Product.jXs
       console.log(item);
-      this.state.allProducts.find((prod) => {
-        return prod === item;
-      });
+       let product = this.state.allProducts.find(prod => prod.name === item);
+       this.setState({
+
+       })
     };
 
     return (
