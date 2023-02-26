@@ -6,6 +6,7 @@ import SizeAndColor from "./SizeAndColor";
 
 class ProductDescription extends Component{
     render(){
+        console.log(this.props.product);
         return(
             <div className="category">
                 <Navbar currencies={this.props.currencies}/>

@@ -134,7 +134,7 @@ class App extends Component {
         />
         <Route
           path="product"
-          element={<ProductDescription currencies={this.state.currencies} />}
+          element={<ProductDescription currencies={this.state.currencies} product={this.state.selectedProduct} />}
         />
         <Route
           path="cart"
