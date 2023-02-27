@@ -20,7 +20,7 @@ class ProductDescription extends Component{
                             <img className="product-bar-img" src={image} alt='product'/>
                         </div>
                         <div className="main-product">
-                            <img src={image} alt='product'/>
+                            <img className="product-image" src={image} alt='product'/>
                         </div>
                     </div>
                     <div className="details">
