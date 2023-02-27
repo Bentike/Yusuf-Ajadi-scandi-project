@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import Navbar from "./Navbar";
-import wool from '../Images/wool.png';
 import '../Styles/ProductDescription.css';
 import SizeAndColor from "./SizeAndColor";
 
