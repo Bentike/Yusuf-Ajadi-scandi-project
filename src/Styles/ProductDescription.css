@@ -59,6 +59,11 @@
     margin-bottom: 10px;
 }
 
+.colors-wrap{
+    display: flex;
+    flex-direction: row;
+}
+
 .colors div{
     width: 30px;
     height: 20px;

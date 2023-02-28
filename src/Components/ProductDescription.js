@@ -56,7 +56,7 @@ class ProductDescription extends Component {
             {this.props.product.category === "tech" ? (
               <div>
                 <p>Colors:</p>
-                <div>
+                <div className="colors-wrap">
                   {colors.map((attr) => {
                     return <Colors key={attr.id} color={attr.value} />;
                   })}
