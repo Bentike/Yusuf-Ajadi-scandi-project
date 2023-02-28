@@ -6,10 +6,7 @@ class Sizes extends Component{
             <div>
                 <p>Size:</p>
                 <div className="sizes">
-                    <p>XS</p>
-                    <p>S</p>
-                    <p>M</p>
-                    <p>L</p>
+                    <p>{this.props.size}</p>
                 </div>
             </div>
         )
