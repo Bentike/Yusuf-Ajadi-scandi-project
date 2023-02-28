@@ -64,6 +64,10 @@
     flex-direction: row;
 }
 
+.selected-color{
+    border: 3px solid #000;
+}
+
 .colors div{
     width: 30px;
     height: 20px;
