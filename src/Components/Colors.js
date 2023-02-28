@@ -6,7 +6,7 @@ class Colors extends Component {
       <div>
         <p>Color:</p>
         <div className="colors">
-          <div></div>
+          <div style={{backgroundColor: this.props.color}}></div>
         </div>
       </div>
     );
