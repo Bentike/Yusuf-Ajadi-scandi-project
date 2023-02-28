@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import Navbar from "./Navbar";
 import '../Styles/ProductDescription.css';
-import SizeAndColor from "./SizeAndColor";
+import Sizes from "./Sizes";
+import Colors from "./Colors";
 
 class ProductDescription extends Component{
     render(){
@@ -28,7 +29,8 @@ class ProductDescription extends Component{
                             <h2>{name}</h2>
                             <h3>{brand}</h3>
                         </div>
-                       <SizeAndColor/>
+                        <Sizes/>
+                        <Colors/>
                         <h3>Price:</h3>
                         <p>{price}</p>
                         <button>ADD TO CART</button>
