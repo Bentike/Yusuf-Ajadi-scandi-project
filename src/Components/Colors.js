@@ -7,8 +7,6 @@ class Colors extends Component {
         <p>Color:</p>
         <div className="colors">
           <div></div>
-          <div></div>
-          <div></div>
         </div>
       </div>
     );
