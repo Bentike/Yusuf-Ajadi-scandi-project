@@ -11,8 +11,7 @@ class ProductDescription extends Component {
       this.props.product;
     let image = gallery[0];
     let price = prices[0].amount;
-    let attribute = attributes[0].items
-   
+    console.log(attributes);
     return (
       <div className="category">
         <Navbar currencies={this.props.currencies} />
