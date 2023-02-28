@@ -11,7 +11,15 @@ class ProductDescription extends Component {
       this.props.product;
     let image = gallery[0];
     let price = prices[0].amount;
-    console.log(attributes);
+    let attribute = [];
+    if (attributes.length) {
+      for (let attr of attributes) {
+        if (attr.type === "swatch") {
+          attribute = attr.items;
+        }
+        continue;
+      }
+    }
     return (
       <div className="category">
         <Navbar currencies={this.props.currencies} />
@@ -32,14 +40,18 @@ class ProductDescription extends Component {
               <h3>{brand}</h3>
             </div>
             <Sizes />
-            <div>
-              <p>Colors:</p>
-              <div className="colors">
-                {/* {attribute.map((attr) => {
-                  return <Colors key={attr.id} color={attr.value} />;
-                })} */}
+            {attribute ? (
+              <div>
+                <p>Colors:</p>
+                <div className="colors">
+                  {attribute.map((attr) => {
+                    return <Colors key={attr.id} color={attr.value} />;
+                  })}
+                </div>
               </div>
-            </div>
+            ) : (
+              ""
+            )}
             <h3>Price:</h3>
             <p>{price}</p>
             <button>ADD TO CART</button>
