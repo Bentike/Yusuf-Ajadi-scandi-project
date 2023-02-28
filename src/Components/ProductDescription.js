@@ -6,18 +6,20 @@ import Colors from "./Colors";
 
 class ProductDescription extends Component {
   render() {
-    console.log(this.props.product);
     const { name, brand, gallery, description, prices, attributes } =
       this.props.product;
     let image = gallery[0];
     let price = prices[0].amount;
-    let attribute = [];
-    if (attributes.length) {
-      for (let attr of attributes) {
-        if (attr.type === "swatch") {
-          attribute = attr.items;
+    let colors = [];
+    let sizes = [];
+    if (this.props.product.category === "clothes") {
+      sizes = this.props.product.attributes[0].items;
+    } else if (this.props.product.category === "tech") {
+      if (attributes.length) {
+        for (let attr of attributes) {
+          if (attr.id === "Color") colors = attr.items;
+          continue;
         }
-        continue;
       }
     }
     return (
@@ -39,12 +41,23 @@ class ProductDescription extends Component {
               <h2>{name}</h2>
               <h3>{brand}</h3>
             </div>
-            <Sizes />
-            {attribute ? (
+            {this.props.product.category === "clothes" ? (
+              <div>
+                <p>Sizes:</p>
+                <div className="sizes">
+                  {sizes.map((item) => {
+                    return <Sizes key={item.id} size={item.value} />;
+                  })}
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
+            {this.props.product.category === "tech" ? (
               <div>
                 <p>Colors:</p>
                 <div className="colors">
-                  {attribute.map((attr) => {
+                  {colors.map((attr) => {
                     return <Colors key={attr.id} color={attr.value} />;
                   })}
                 </div>
