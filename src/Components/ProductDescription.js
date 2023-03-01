@@ -6,6 +6,7 @@ import Colors from "./Colors";
 
 class ProductDescription extends Component {
   render() {
+   console.log(this.props.product.description)
     const { name, brand, gallery, description, prices, attributes } =
       this.props.product;
     let image = gallery[0];
@@ -69,11 +70,7 @@ class ProductDescription extends Component {
             <p>{price}</p>
             <button>ADD TO CART</button>
             <div className="description">
-              <div className="description-text">
-                Find stunning women's cocktail dresses and party dresses. Stand
-                out in lace and metallic cocktail dresses and party dresses from
-                all your favorite brands.
-              </div>
+              <div className="description-text"></div>
             </div>
           </div>
         </div>
