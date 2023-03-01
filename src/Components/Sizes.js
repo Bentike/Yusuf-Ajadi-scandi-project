@@ -5,12 +5,19 @@ class Sizes extends Component{
         super(props);
         this.sizeRef = React.createRef()
     }
-    
+
     render(){
+        const getSize = () => {
+            const mySize = document.getElementsByClassName("my-size");
+            for(let size of mySize){
+                size.classList.remove("selected-color");
+            }
+            this.sizeRef.current.classList.toggle("selected-color");
+        }
         return(
             <div>
                 <div className="sizes">
-                    <p>{this.props.size}</p>
+                    <p className="my-size" onClick={getSize} ref={this.sizeRef}>{this.props.size}</p>
                 </div>
             </div>
         )
