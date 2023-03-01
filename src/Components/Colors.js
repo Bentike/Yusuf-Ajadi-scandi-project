@@ -4,7 +4,9 @@ class Colors extends Component {
   render() {
     const addClass = () => {
         let myDiv = document.getElementsByClassName('colors');
-        let myColors = document.getElementsByClassName
+        let myColors = document.getElementsByClassName('my-color');
+        myColors[0].classList.add("selected-color");
+        console.log(myColors[0].classList)
     }
 
     return (
