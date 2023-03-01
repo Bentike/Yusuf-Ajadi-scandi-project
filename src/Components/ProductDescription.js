@@ -6,10 +6,12 @@ import Colors from "./Colors";
 
 class ProductDescription extends Component {
   render() {
+    console.log(this.props.product.prices);
     const { name, brand, gallery, description, prices, attributes } =
       this.props.product;
     let image = gallery[0];
     let price = prices[0].amount;
+    let symbol = prices[0].currency.symbol;
     let colors = [];
     let sizes = [];
     let productDescription = {__html: description}
@@ -67,7 +69,7 @@ class ProductDescription extends Component {
               ""
             )}
             <h3>Price:</h3>
-            <p>{price}</p>
+            <p>{symbol}{price}</p>
             <button>ADD TO CART</button>
             <div className="description">
               <div className="description-text" dangerouslySetInnerHTML={productDescription}></div>
