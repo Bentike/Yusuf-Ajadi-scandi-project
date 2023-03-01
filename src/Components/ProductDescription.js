@@ -6,13 +6,13 @@ import Colors from "./Colors";
 
 class ProductDescription extends Component {
   render() {
-   console.log(this.props.product.description)
     const { name, brand, gallery, description, prices, attributes } =
       this.props.product;
     let image = gallery[0];
     let price = prices[0].amount;
     let colors = [];
     let sizes = [];
+    let productDescription = {__html: description}
     if (this.props.product.category === "clothes") {
       sizes = this.props.product.attributes[0].items;
     } else if (this.props.product.category === "tech") {
@@ -70,7 +70,7 @@ class ProductDescription extends Component {
             <p>{price}</p>
             <button>ADD TO CART</button>
             <div className="description">
-              <div className="description-text"></div>
+              <div className="description-text" dangerouslySetInnerHTML={productDescription}></div>
             </div>
           </div>
         </div>
