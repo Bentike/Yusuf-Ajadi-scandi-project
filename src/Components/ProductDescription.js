@@ -69,11 +69,11 @@ class ProductDescription extends Component {
             <p>{price}</p>
             <button>ADD TO CART</button>
             <div className="description">
-              <p className="description-text">
+              <div className="description-text">
                 Find stunning women's cocktail dresses and party dresses. Stand
                 out in lace and metallic cocktail dresses and party dresses from
                 all your favorite brands.
-              </p>
+              </div>
             </div>
           </div>
         </div>
