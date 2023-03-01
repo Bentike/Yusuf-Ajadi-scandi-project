@@ -7,6 +7,10 @@ class Colors extends Component {
   }
   render() {
     const addClass = () => {
+      const myColors = document.getElementsByClassName('my-color');
+      for(let color of myColors){
+         color.classList.remove("selected-color");
+      }
       this.colorRef.current.classList.toggle("selected-color");
     };
 
