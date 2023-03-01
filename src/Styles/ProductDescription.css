@@ -26,8 +26,8 @@
 }
 
 .sizes p {
-    border: 1px solid #000;
     width: 30px;
+    border: 1px solid #000;
     margin-right: 10px;
     text-align: center;
     font-size: 12px;
