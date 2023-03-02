@@ -12,7 +12,7 @@ class App extends Component {
     super(props);
     this.state = {
       currencies: [],
-      selectedCurrency: "",
+      selectedCurrency: "$",
       allProducts: [],
       techProducts: [],
       clotheProducts: [],
@@ -102,11 +102,13 @@ class App extends Component {
        })
     };
 
+    // this method sets the user selected currency
     const handleCurrencyChange = () => {
      let curr = document.getElementById("currency");
      let value = curr.value
-     this.setState({selectedCurrency: value});
-     console.log(this.state.selectedCurrency);
+     this.setState({
+         selectedCurrency: value
+     });
     }
 
     return (
