@@ -7,6 +7,7 @@ import Colors from "./Colors";
 class ProductDescription extends Component {
   render() {
     //console.log(this.props.product.prices);
+    console.log(this.props.currency)
     const { name, brand, gallery, description, prices, attributes } =
       this.props.product;
     let image = gallery[0];

@@ -17,7 +17,7 @@ class App extends Component {
       techProducts: [],
       clotheProducts: [],
       selectedProduct: [],
-      cart: []
+      cart: [],
     };
   }
 
@@ -96,20 +96,20 @@ class App extends Component {
     // This method will get the data of the clicked product and pass it to this.state.selectedProduct
     // this method will be passed as a prop to Product.jXs
     const handleProductClick = (item) => {
-       let product = this.state.allProducts.find(prod => prod.name === item);
-       this.setState({
-            selectedProduct: product
-       })
+      let product = this.state.allProducts.find((prod) => prod.name === item);
+      this.setState({
+        selectedProduct: product,
+      });
     };
 
     // this method sets the user selected currency
     const handleCurrencyChange = () => {
-     let curr = document.getElementById("currency");
-     let value = curr.value
-     this.setState({
-         selectedCurrency: value
-     });
-    }
+      let curr = document.getElementById("currency");
+      let value = curr.value;
+      this.setState({
+        selectedCurrency: value,
+      });
+    };
 
     return (
       <Routes>
@@ -145,7 +145,14 @@ class App extends Component {
         />
         <Route
           path="product"
-          element={<ProductDescription currencies={this.state.currencies} product={this.state.selectedProduct} handleCurrencyChange={handleCurrencyChange} />}
+          element={
+            <ProductDescription
+              currency={this.state.selectedCurrency}
+              currencies={this.state.currencies}
+              product={this.state.selectedProduct}
+              handleCurrencyChange={handleCurrencyChange}
+            />
+          }
         />
         <Route
           path="cart"
