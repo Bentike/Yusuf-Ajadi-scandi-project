@@ -52,7 +52,7 @@ class Navbar extends Component {
 
           <div className="cart-div">
             <div>
-              <select name="currency" onChange={() => console.log("changed currency")}>
+              <select name="currency" onChange={this.props.handleCurrencyChange}>
                {this.props.currencies.map((currency) => {
                   return <option key={currency.label} value={currency.symbol}>{currency.symbol}</option>
                })}
