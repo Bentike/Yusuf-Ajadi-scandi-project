@@ -27,7 +27,7 @@ class ProductDescription extends Component {
     }
     return (
       <div className="category">
-        <Navbar currencies={this.props.currencies} />
+        <Navbar currencies={this.props.currencies} handleCurrencyChange={this.props.handleCurrencyChange}/>
         <div className="product">
           <div className="product-wrapper">
             <div className="product-bar">

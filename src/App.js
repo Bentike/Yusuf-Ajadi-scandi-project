@@ -101,6 +101,10 @@ class App extends Component {
        })
     };
 
+    const handleCurrencyChange = () => {
+      console.log("changed currency")
+    }
+
     return (
       <Routes>
         <Route
@@ -135,7 +139,7 @@ class App extends Component {
         />
         <Route
           path="product"
-          element={<ProductDescription currencies={this.state.currencies} product={this.state.selectedProduct} />}
+          element={<ProductDescription currencies={this.state.currencies} product={this.state.selectedProduct} handleCurrencyChange={handleCurrencyChange} />}
         />
         <Route
           path="cart"
