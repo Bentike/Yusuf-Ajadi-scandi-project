@@ -1,23 +1,26 @@
-import React, {Component} from "react";
-import Navbar from './Navbar';
+import React, { Component } from "react";
+import Navbar from "./Navbar";
 import CartItem from "./CartItem";
 import Checkout from "./Checkout";
-import '../Styles/Cart.css';
+import "../Styles/Cart.css";
 
-class CartPage extends Component{
-    render(){
-        return(
-            <div className="category">
-                <Navbar currencies={this.props.currencies}/>
-                <h2 className="cart-header">CART</h2>
-                <hr/>
-                  <CartItem/>
-                  <CartItem/>
-                  <CartItem/>
-                  <Checkout/>
-            </div>
-        );
-    }
+class CartPage extends Component {
+  render() {
+    return (
+      <div className="category">
+        <Navbar
+          currencies={this.props.currencies}
+          handleCurrencyChange={this.props.handleCurrencyChange}
+        />
+        <h2 className="cart-header">CART</h2>
+        <hr />
+        <CartItem />
+        <CartItem />
+        <CartItem />
+        <Checkout />
+      </div>
+    );
+  }
 }
 
 export default CartPage;

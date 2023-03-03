@@ -157,7 +157,7 @@ class App extends Component {
         />
         <Route
           path="cart"
-          element={<CartPage currencies={this.state.currencies} />}
+          element={<CartPage currencies={this.state.currencies}  handleCurrencyChange={handleCurrencyChange} />}
         />
       </Routes>
     );
