@@ -8,18 +8,18 @@ class ProductDescription extends Component {
   render() {
     const { name, brand, gallery, description, prices, attributes } =
       this.props.product;
-      let amount;
-      let symbol;
-      for(let i = 0; i < prices.length; i++){
-        if(prices[i].currency.symbol === this.props.currency){
-           amount = prices[i].amount;
-           symbol = prices[i].currency.symbol;
-        }
+    let amount;
+    let symbol;
+    for (let i = 0; i < prices.length; i++) {
+      if (prices[i].currency.symbol === this.props.currency) {
+        amount = prices[i].amount;
+        symbol = prices[i].currency.symbol;
       }
+    }
     let image = gallery[0];
     let colors = [];
     let sizes = [];
-    let productDescription = {__html: description}
+    let productDescription = { __html: description };
     if (this.props.product.category === "clothes") {
       sizes = this.props.product.attributes[0].items;
     } else if (this.props.product.category === "tech") {
@@ -32,7 +32,11 @@ class ProductDescription extends Component {
     }
     return (
       <div className="category">
-        <Navbar currencies={this.props.currencies} handleCurrencyChange={this.props.handleCurrencyChange}/>
+        <Navbar
+          currencies={this.props.currencies}
+          handleCurrencyChange={this.props.handleCurrencyChange}
+          selectedCurrency={this.props.selectedCurrency}
+        />
         <div className="product">
           <div className="product-wrapper">
             <div className="product-bar">
@@ -74,10 +78,16 @@ class ProductDescription extends Component {
               ""
             )}
             <h3>Price:</h3>
-            <p>{symbol}{amount}</p>
+            <p>
+              {symbol}
+              {amount}
+            </p>
             <button>ADD TO CART</button>
             <div className="description">
-              <div className="description-text" dangerouslySetInnerHTML={productDescription}></div>
+              <div
+                className="description-text"
+                dangerouslySetInnerHTML={productDescription}
+              ></div>
             </div>
           </div>
         </div>

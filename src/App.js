@@ -119,6 +119,7 @@ class App extends Component {
               allProducts={this.state.allProducts}
               productClick={handleProductClick}
               handleCurrencyChange={handleCurrencyChange}
+              selectedCurrency={this.state.selectedCurrency}
             />
           }
         />
@@ -130,6 +131,7 @@ class App extends Component {
               techProducts={this.state.techProducts}
               productClick={handleProductClick}
               handleCurrencyChange={handleCurrencyChange}
+              selectedCurrency={this.state.selectedCurrency}
             />
           }
         />
@@ -141,6 +143,7 @@ class App extends Component {
               clotheProducts={this.state.clotheProducts}
               productClick={handleProductClick}
               handleCurrencyChange={handleCurrencyChange}
+              selectedCurrency={this.state.selectedCurrency}
             />
           }
         />
@@ -152,6 +155,7 @@ class App extends Component {
               currencies={this.state.currencies}
               product={this.state.selectedProduct}
               handleCurrencyChange={handleCurrencyChange}
+              selectedCurrency={this.state.selectedCurrency}
             />
           }
         />
@@ -161,6 +165,7 @@ class App extends Component {
             <CartPage
               currencies={this.state.currencies}
               handleCurrencyChange={handleCurrencyChange}
+              selectedCurrency={this.state.selectedCurrency}
             />
           }
         />

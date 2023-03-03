@@ -6,11 +6,16 @@ class Clothes extends Component {
   render() {
     return (
       <div className="category">
-        <Navbar currencies={this.props.currencies} handleCurrencyChange={this.props.handleCurrencyChange}/>
+        <Navbar
+          currencies={this.props.currencies}
+          handleCurrencyChange={this.props.handleCurrencyChange}
+          selectedCurrency={this.props.selectedCurrency}
+        />
         <h2 className="header">Clothes Category</h2>
         <div className="product-container">
           {this.props.clotheProducts.map((product) => {
-            const { id, name, brand, description, gallery, inStock, prices } = product;
+            const { id, name, brand, description, gallery, inStock, prices } =
+              product;
             let image = gallery[0];
             let price = prices[0].amount;
             return (
