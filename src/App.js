@@ -103,11 +103,9 @@ class App extends Component {
     };
 
     // this method sets the user selected currency
-    const handleCurrencyChange = () => {
-      let curr = document.getElementById("currency");
-      let value = curr.value;
+    const handleCurrencyChange = (event) => {
       this.setState({
-        selectedCurrency: value,
+        selectedCurrency: event.target.value,
       });
     };
 
