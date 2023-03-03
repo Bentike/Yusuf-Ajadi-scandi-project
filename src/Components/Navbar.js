@@ -24,10 +24,6 @@ class Navbar extends Component {
       this.amountRef.current.style.display = "none";
     };
 
-    const handleOptions = (event) => {
-      console.log(event.target.value);
-    };
-
     const showOverlay = () => {
       this.setState((prevState) => ({
         overlay: !prevState.overlay,
