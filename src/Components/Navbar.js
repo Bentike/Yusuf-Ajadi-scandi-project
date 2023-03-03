@@ -26,7 +26,7 @@ class Navbar extends Component {
 
     const handleOptions = (event) => {
       console.log(event.target.value);
-    }
+    };
 
     const showOverlay = () => {
       this.setState((prevState) => ({
@@ -58,9 +58,18 @@ class Navbar extends Component {
           <div className="cart-div">
             <div>
               <select id="currency" onChange={this.props.handleCurrencyChange}>
-               {this.props.currencies.map((currency) => {
-                  return <option key={currency.label} value={currency.symbol} ref={this.optionRef}>{currency.symbol}</option>
-               })}
+                {this.props.currencies.map((currency) => {
+                  return (
+                    <option
+                      key={currency.label}
+                      value={currency.symbol}
+                      ref={this.optionRef}
+                      selected={this.props.selectedCurrency === currency.symbol ? true : false}
+                    >
+                      {currency.symbol}
+                    </option>
+                  );
+                })}
               </select>
             </div>
             <div
