@@ -6,11 +6,14 @@ import Colors from "./Colors";
 
 class ProductDescription extends Component {
   render() {
-    //console.log(this.props.product.prices);
-    // To be continued on displaying price depending on the currency props value Insha Allah...
-    console.log(this.props.currency)
     const { name, brand, gallery, description, prices, attributes } =
       this.props.product;
+      let amount;
+      for(let i = 0; i < prices.length; i++){
+        if(prices[i].currency.symbol === this.props.currency){
+           amount = prices[i].amount;
+        }
+      }
     let image = gallery[0];
     let price = prices[0].amount;
     let symbol = prices[0].currency.symbol;
@@ -71,7 +74,7 @@ class ProductDescription extends Component {
               ""
             )}
             <h3>Price:</h3>
-            <p>{symbol}{price}</p>
+            <p>{symbol}{amount}</p>
             <button>ADD TO CART</button>
             <div className="description">
               <div className="description-text" dangerouslySetInnerHTML={productDescription}></div>
