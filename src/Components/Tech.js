@@ -6,7 +6,7 @@ class Tech extends Component {
   render() {
     return (
       <div className="category">
-        <Navbar currencies={this.props.currencies} />
+        <Navbar currencies={this.props.currencies} handleCurrencyChange={this.props.handleCurrencyChange}/>
         <h2 className="header">Tech Category</h2>
         <div className="product-container">
           {this.props.techProducts.map((product) => {
