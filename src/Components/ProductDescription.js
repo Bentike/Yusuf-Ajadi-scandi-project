@@ -9,14 +9,14 @@ class ProductDescription extends Component {
     const { name, brand, gallery, description, prices, attributes } =
       this.props.product;
       let amount;
+      let symbol;
       for(let i = 0; i < prices.length; i++){
         if(prices[i].currency.symbol === this.props.currency){
            amount = prices[i].amount;
+           symbol = prices[i].currency.symbol;
         }
       }
     let image = gallery[0];
-    let price = prices[0].amount;
-    let symbol = prices[0].currency.symbol;
     let colors = [];
     let sizes = [];
     let productDescription = {__html: description}
