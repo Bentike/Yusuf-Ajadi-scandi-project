@@ -141,6 +141,7 @@ class App extends Component {
               currencies={this.state.currencies}
               clotheProducts={this.state.clotheProducts}
               productClick={handleProductClick}
+              handleCurrencyChange={handleCurrencyChange}
             />
           }
         />
@@ -157,7 +158,12 @@ class App extends Component {
         />
         <Route
           path="cart"
-          element={<CartPage currencies={this.state.currencies}  handleCurrencyChange={handleCurrencyChange} />}
+          element={
+            <CartPage
+              currencies={this.state.currencies}
+              handleCurrencyChange={handleCurrencyChange}
+            />
+          }
         />
       </Routes>
     );
