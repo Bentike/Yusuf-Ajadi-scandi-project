@@ -10,6 +10,7 @@ import "./App.css";
 class App extends Component {
   constructor(props) {
     super(props);
+    this.sizeRef = React.createRef();
     this.state = {
       currencies: [],
       selectedCurrency: "$",
@@ -112,18 +113,17 @@ class App extends Component {
     };
 
     // This method gets The size attribute of a selected product;
-
     const getSize = () => {
       const mySize = document.getElementsByClassName("my-size");
       for (let size of mySize) {
         size.classList.remove("selected-size");
       }
-      this.sizeRef.current.classList.toggle("selected-size");
+      console.log(this.sizeRef.current.textContent);
+      // this.sizeRef.current.classList.toggle("selected-size");
     };
 
     // this method add items to the cart
     // it is passed as a prop to ProductDescription.js
-
     const addToCart = () => {
       this.setState({
         cart: [...this.state.cart, this.state.selectedProduct]
@@ -179,6 +179,8 @@ class App extends Component {
               handleCurrencyChange={handleCurrencyChange}
               selectedCurrency={this.state.selectedCurrency}
               addToCart={addToCart}
+              getSize={getSize}
+              ref={this.sizeRef}
             />
           }
         />
