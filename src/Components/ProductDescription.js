@@ -58,7 +58,12 @@ class ProductDescription extends Component {
                 <p>Sizes:</p>
                 <div className="sizes">
                   {sizes.map((item) => {
-                    return <Sizes key={item.id} size={item.value} getSize={this.props.getSize} ref={this.props.sizeRef}/>;
+                    return (
+                      <Sizes
+                        key={item.id}
+                        size={item.value}
+                      />
+                    );
                   })}
                 </div>
               </div>
@@ -96,4 +101,4 @@ class ProductDescription extends Component {
   }
 }
 
-export default React.forwardRef((props, ref) => <ProductDescription sizeRef={ref} {...props}/>);
+export default ProductDescription;
