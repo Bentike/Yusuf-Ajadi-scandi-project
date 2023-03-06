@@ -13,10 +13,12 @@ class App extends Component {
     this.state = {
       currencies: [],
       selectedCurrency: "$",
+      selectedProduct: [],
+      selctedSize: "",
+      selectedColor: "",
       allProducts: [],
       techProducts: [],
       clotheProducts: [],
-      selectedProduct: [],
       cart: [],
     };
   }
@@ -113,7 +115,10 @@ class App extends Component {
     // it is passed as a prop to ProductDescription.js
 
     const addToCart = () => {
-      console.log("button clicked")
+      this.setState({
+        cart: [...this.state.cart, this.state.selectedProduct]
+      });
+      console.log(this.state.cart);
     }
 
     return (
