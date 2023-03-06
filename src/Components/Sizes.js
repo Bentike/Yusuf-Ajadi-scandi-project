@@ -16,7 +16,7 @@ class Sizes extends Component {
     return (
       <div>
         <div className="sizes">
-          <p className="my-size" onClick={getSize} ref={this.sizeRef}>
+          <p className="my-size" onClick={getSize} ref={this.props.sizeRef}>
             {this.props.size}
           </p>
         </div>

@@ -170,6 +170,7 @@ class App extends Component {
               handleCurrencyChange={handleCurrencyChange}
               selectedCurrency={this.state.selectedCurrency}
               addToCart={addToCart}
+              sizeRef={this.sizeRef}
             />
           }
         />
