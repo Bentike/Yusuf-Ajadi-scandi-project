@@ -15,9 +15,7 @@ class CartPage extends Component {
         <h2 className="cart-header">CART</h2>
         <hr />
         <CartItem />
-        <CartItem />
-        <CartItem />
-        <Checkout />
+       
       </div>
     );
   }

@@ -10,7 +10,7 @@ class CartItem extends Component {
                 <div className="cart-item">
                     <div>
                         <h3>Apollo</h3>
-                        <h4>Running Short</h4>
+                        <h4>Running Shot</h4>
                         <p>$50.00</p>
                         <SizeAndColor/>
                     </div>
