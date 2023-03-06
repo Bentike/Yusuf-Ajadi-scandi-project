@@ -3,6 +3,7 @@ import React, { Component } from "react";
 class Sizes extends Component {
   constructor(props) {
     super(props);
+    this.sizeRef = React.createRef();
   }
 
   render() {
@@ -16,7 +17,7 @@ class Sizes extends Component {
     return (
       <div>
         <div className="sizes">
-          <p className="my-size" onClick={getSize} ref={this.props.sizeRef}>
+          <p className="my-size" onClick={getSize} ref={this.sizeRef}>
             {this.props.size}
           </p>
         </div>

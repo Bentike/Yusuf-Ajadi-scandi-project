@@ -58,7 +58,7 @@ class ProductDescription extends Component {
                 <p>Sizes:</p>
                 <div className="sizes">
                   {sizes.map((item) => {
-                    return <Sizes key={item.id} size={item.value} sizeRef={this.props.sizeRef} />;
+                    return <Sizes key={item.id} size={item.value}/>;
                   })}
                 </div>
               </div>
