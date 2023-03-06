@@ -109,6 +109,13 @@ class App extends Component {
       });
     };
 
+    // this method add items to the cart
+    // it is passed as a prop to ProductDescription.js
+
+    const addToCart = () => {
+      console.log("button clicked")
+    }
+
     return (
       <Routes>
         <Route
@@ -156,6 +163,7 @@ class App extends Component {
               product={this.state.selectedProduct}
               handleCurrencyChange={handleCurrencyChange}
               selectedCurrency={this.state.selectedCurrency}
+              addToCart={addToCart}
             />
           }
         />

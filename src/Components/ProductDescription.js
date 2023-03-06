@@ -82,7 +82,7 @@ class ProductDescription extends Component {
               {symbol}
               {amount}
             </p>
-            <button>ADD TO CART</button>
+            <button onClick={this.props.addToCart}>ADD TO CART</button>
             <div className="description">
               <div
                 className="description-text"
