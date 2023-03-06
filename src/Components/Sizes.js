@@ -10,9 +10,9 @@ class Sizes extends Component {
     const getSize = () => {
       const mySize = document.getElementsByClassName("my-size");
       for (let size of mySize) {
-        size.classList.remove("selected-color");
+        size.classList.remove("selected-size");
       }
-      this.sizeRef.current.classList.toggle("selected-color");
+      this.sizeRef.current.classList.toggle("selected-size");
     };
     return (
       <div>
