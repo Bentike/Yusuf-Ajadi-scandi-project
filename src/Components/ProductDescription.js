@@ -62,6 +62,7 @@ class ProductDescription extends Component {
                       <Sizes
                         key={item.id}
                         size={item.value}
+                        setSize={this.props.setSize}
                       />
                     );
                   })}

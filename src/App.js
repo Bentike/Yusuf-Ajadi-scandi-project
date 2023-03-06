@@ -14,7 +14,7 @@ class App extends Component {
       currencies: [],
       selectedCurrency: "$",
       selectedProduct: [],
-      selctedSize: "",
+      selectedSize: "",
       selectedColor: "",
       allProducts: [],
       techProducts: [],
@@ -120,6 +120,16 @@ class App extends Component {
       console.log(this.state.cart);
     }
 
+    // this method gets the selected Size attribute of a product and sets it's value to this.state.selectedSize
+    // this method will be passed to ProductDescription.js as a prop
+    // this method will be passed from ProductDescrition.js to Sizes.js as a prop where it will be called.
+    const setSelectedSize = (size) => {
+       this.setState({
+         selectedSize: size
+       });
+       console.log(this.state.selectedSize)
+    }
+
     return (
       <Routes>
         <Route
@@ -168,6 +178,7 @@ class App extends Component {
               handleCurrencyChange={handleCurrencyChange}
               selectedCurrency={this.state.selectedCurrency}
               addToCart={addToCart}
+              setSize={setSelectedSize}
             />
           }
         />
