@@ -115,9 +115,19 @@ class App extends Component {
     // this method add items to the cart
     // it is passed as a prop to ProductDescription.js
     const addToCart = () => {
-      if (this.state.cart.includes(this.state.selectedProduct)) {
-        console.log("Item already in cart");
-        return;
+      for (let item of this.state.cart) {
+        if (item.category === "clothes" && this.state.selectedProduct.category === "clothes"){
+             if(item.size === this.state.selectedProduct.size){
+              console.log("Item already in cart");
+              return;
+             }
+        }
+        if(item.category === "clothes" && this.state.selectedProduct.category === "tech"){
+          if(item.color === this.state.selectedProduct.color){
+            console.log("Item already in cart");
+            return;
+           }
+        }
       }
       if (
         (this.state.selectedProduct.category === "clothes" &&
@@ -139,18 +149,26 @@ class App extends Component {
     // this method will be passed to ProductDescription.js as a prop
     // this method will be passed from ProductDescrition.js to Sizes.js as a prop where it will be called.
     const setSelectedSize = (size) => {
+      let selectedProduct = this.state.selectedProduct;
+      selectedProduct.size = size;
       this.setState({
         selectedSize: size,
+        selectedProduct,
       });
+      console.log(this.state.selectedProduct);
     };
 
     // this method gets the selected color attribute of a product and sets it's value to this.state.selectedColor
     // this method will be passed to ProductDescription.js as a prop
     // this method will be passed from ProductDescrition.js to Colors.js as a prop where it will be called.
     const setSelectedColor = (color) => {
+      let selectedProduct = this.state.selectedProduct;
+      selectedProduct.color = color;
       this.setState({
         selectedColor: color,
+        selectedProduct,
       });
+      console.log(this.state.selectedProduct);
     };
 
     return (
