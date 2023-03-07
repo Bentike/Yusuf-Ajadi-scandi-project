@@ -187,6 +187,7 @@ class App extends Component {
               selectedCurrency={this.state.selectedCurrency}
               addToCart={addToCart}
               setSize={setSelectedSize}
+              setColor={setSelectedColor}
             />
           }
         />
