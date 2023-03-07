@@ -76,7 +76,7 @@ class ProductDescription extends Component {
                 <p>Colors:</p>
                 <div className="colors-wrap">
                   {colors.map((attr) => {
-                    return <Colors key={attr.id} color={attr.value} />;
+                    return <Colors key={attr.id} color={attr.value} setColor={this.props.setColor}/>;
                   })}
                 </div>
               </div>
