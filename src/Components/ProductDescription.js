@@ -6,6 +6,7 @@ import Colors from "./Colors";
 
 class ProductDescription extends Component {
   render() {
+    console.log(this.props.product);
     const { name, brand, gallery, description, prices, attributes } =
       this.props.product;
     let amount;

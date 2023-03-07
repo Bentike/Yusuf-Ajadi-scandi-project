@@ -13,7 +13,7 @@ class App extends Component {
     this.state = {
       currencies: [],
       selectedCurrency: "$",
-      selectedProduct: [],
+      selectedProduct: {},
       selectedSize: "",
       selectedColor: "",
       allProducts: [],
@@ -115,20 +115,20 @@ class App extends Component {
     // this method add items to the cart
     // it is passed as a prop to ProductDescription.js
     const addToCart = () => {
-      for (let item of this.state.cart) {
-        if (item.category === "clothes" && this.state.selectedProduct.category === "clothes"){
-             if(item.size === this.state.selectedProduct.size){
-              console.log("Item already in cart");
-              return;
-             }
-        }
-        if(item.category === "clothes" && this.state.selectedProduct.category === "tech"){
-          if(item.color === this.state.selectedProduct.color){
-            console.log("Item already in cart");
-            return;
-           }
-        }
-      }
+      // for (let item of this.state.cart) {
+      //   if (item.category === "clothes" && this.state.selectedProduct.category === "clothes"){
+      //       //  if(item.size === this.state.selectedProduct.size){
+      //       //   console.log("Item already in cart");
+      //       //   return;
+      //       //  }
+      //   }
+      //   if(item.category === "clothes" && this.state.selectedProduct.category === "tech"){
+      //     if(item.color === this.state.selectedProduct.color){
+      //       console.log("Item already in cart");
+      //       return;
+      //      }
+      //   }
+      // }
       if (
         (this.state.selectedProduct.category === "clothes" &&
           !this.state.selectedSize) ||
@@ -140,20 +140,24 @@ class App extends Component {
         return;
       }
       this.setState({
-        cart: [...this.state.cart, this.state.selectedProduct],
+        // To be continued here Insha Allah...
+        // To fix the issue of cart Items size attribute updating to the latest selected size;
+        cart: this.state.cart.concat(this.state.selectedProduct),
       });
       console.log(this.state.cart);
+      console.log("================")
+      console.log(this.state.selectedProduct);
     };
 
     // this method gets the selected Size attribute of a product and sets it's value to this.state.selectedSize
     // this method will be passed to ProductDescription.js as a prop
     // this method will be passed from ProductDescrition.js to Sizes.js as a prop where it will be called.
     const setSelectedSize = (size) => {
-      let selectedProduct = this.state.selectedProduct;
-      selectedProduct.size = size;
+      let selectedProductSize = this.state.selectedProduct;
+      selectedProductSize.size = size;
       this.setState({
         selectedSize: size,
-        selectedProduct,
+        selectedProduct: selectedProductSize,
       });
       console.log(this.state.selectedProduct);
     };
@@ -162,11 +166,11 @@ class App extends Component {
     // this method will be passed to ProductDescription.js as a prop
     // this method will be passed from ProductDescrition.js to Colors.js as a prop where it will be called.
     const setSelectedColor = (color) => {
-      let selectedProduct = this.state.selectedProduct;
-      selectedProduct.color = color;
+      let selectedProductColor = this.state.selectedProduct;
+      selectedProductColor.color = color;
       this.setState({
         selectedColor: color,
-        selectedProduct,
+        selectedProduct: selectedProductColor,
       });
       console.log(this.state.selectedProduct);
     };
