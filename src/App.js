@@ -135,7 +135,7 @@ class App extends Component {
     const setSelectedColor = (color) => {
       this.setState({
          selectedColor: color
-      })
+      });
     }
 
     return (

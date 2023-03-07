@@ -12,6 +12,7 @@ class Colors extends Component {
          color.classList.remove("selected-color");
       }
       this.colorRef.current.classList.toggle("selected-color");
+      this.props.setColor(this.colorRef.current.style.backgroundColor);
     };
 
     return (
