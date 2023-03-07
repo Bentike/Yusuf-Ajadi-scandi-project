@@ -127,7 +127,15 @@ class App extends Component {
        this.setState({
          selectedSize: size
        });
-       console.log(this.state.selectedSize)
+    }
+
+    // this method gets the selected color attribute of a product and sets it's value to this.state.selectedColor
+    // this method will be passed to ProductDescription.js as a prop
+    // this method will be passed from ProductDescrition.js to Colors.js as a prop where it will be called.
+    const setSelectedColor = (color) => {
+      this.setState({
+         selectedColor: color
+      })
     }
 
     return (
