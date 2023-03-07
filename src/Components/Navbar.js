@@ -9,7 +9,6 @@ class Navbar extends Component {
   constructor(props) {
     super(props);
     this.amountRef = React.createRef();
-    this.optionRef = React.createRef();
     this.state = {
       overlay: false,
     };
@@ -59,7 +58,6 @@ class Navbar extends Component {
                     <option
                       key={currency.label}
                       value={currency.symbol}
-                      ref={this.optionRef}
                     >
                       {currency.symbol}
                     </option>
