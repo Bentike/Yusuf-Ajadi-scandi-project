@@ -99,6 +99,7 @@ class App extends Component {
     // this method will be passed as a prop to Product.jXs
     const handleProductClick = (item) => {
       let product = this.state.allProducts.find((prod) => prod.name === item);
+      product.quantity = 1;
       this.setState({
         selectedProduct: product,
       });
@@ -114,29 +115,43 @@ class App extends Component {
     // this method add items to the cart
     // it is passed as a prop to ProductDescription.js
     const addToCart = () => {
+      if (this.state.cart.includes(this.state.selectedProduct)) {
+        console.log("Item already in cart");
+        return;
+      }
+      if (
+        (this.state.selectedProduct.category === "clothes" &&
+          !this.state.selectedSize) ||
+        (this.state.selectedProduct.category === "tech" &&
+          this.state.selectedProduct.attributes &&
+          !this.state.selectedColor)
+      ) {
+        console.log("please select a color or size");
+        return;
+      }
       this.setState({
-        cart: [...this.state.cart, this.state.selectedProduct]
+        cart: [...this.state.cart, this.state.selectedProduct],
       });
       console.log(this.state.cart);
-    }
+    };
 
     // this method gets the selected Size attribute of a product and sets it's value to this.state.selectedSize
     // this method will be passed to ProductDescription.js as a prop
     // this method will be passed from ProductDescrition.js to Sizes.js as a prop where it will be called.
     const setSelectedSize = (size) => {
-       this.setState({
-         selectedSize: size
-       });
-    }
+      this.setState({
+        selectedSize: size,
+      });
+    };
 
     // this method gets the selected color attribute of a product and sets it's value to this.state.selectedColor
     // this method will be passed to ProductDescription.js as a prop
     // this method will be passed from ProductDescrition.js to Colors.js as a prop where it will be called.
     const setSelectedColor = (color) => {
       this.setState({
-         selectedColor: color
+        selectedColor: color,
       });
-    }
+    };
 
     return (
       <Routes>
