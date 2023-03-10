@@ -140,13 +140,8 @@ class App extends Component {
         return;
       }
       this.setState({
-        // To be continued here Insha Allah...
-        // To fix the issue of cart Items size attribute updating to the latest selected size;
         cart: this.state.cart.concat(this.state.selectedProduct),
       });
-      console.log(this.state.cart);
-      console.log("================")
-      console.log(this.state.selectedProduct);
     };
 
     // this method gets the selected Size attribute of a product and sets it's value to this.state.selectedSize
@@ -154,13 +149,11 @@ class App extends Component {
     // this method will be passed from ProductDescrition.js to Sizes.js as a prop where it will be called.
     const setSelectedSize = (size) => {
       let selectedProductSize = this.state.selectedProduct;
-      // selectedProductSize.size = size;
       let newProductSize = Object.assign({}, selectedProductSize, {size: size});
       this.setState({
         selectedSize: size,
         selectedProduct: newProductSize,
       });
-      console.log(this.state.selectedProduct);
     };
 
     // this method gets the selected color attribute of a product and sets it's value to this.state.selectedColor
