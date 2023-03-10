@@ -154,10 +154,11 @@ class App extends Component {
     // this method will be passed from ProductDescrition.js to Sizes.js as a prop where it will be called.
     const setSelectedSize = (size) => {
       let selectedProductSize = this.state.selectedProduct;
-      selectedProductSize.size = size;
+      // selectedProductSize.size = size;
+      let newProductSize = Object.assign({}, selectedProductSize, {size: size});
       this.setState({
         selectedSize: size,
-        selectedProduct: selectedProductSize,
+        selectedProduct: newProductSize,
       });
       console.log(this.state.selectedProduct);
     };
