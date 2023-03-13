@@ -128,7 +128,6 @@ class App extends Component {
           return;
         }
       }
-
       if (
         (this.state.selectedProduct.category === "clothes" &&
           !this.state.selectedSize) ||
@@ -142,8 +141,6 @@ class App extends Component {
       this.setState({
         cart: this.state.cart.concat(this.state.selectedProduct),
       });
-
-      console.log(this.state.cart);
     };
 
     // this method gets the selected Size attribute of a product and sets it's value to this.state.selectedSize
