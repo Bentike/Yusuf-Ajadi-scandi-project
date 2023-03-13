@@ -12,7 +12,6 @@ class CartItem extends Component {
                         <h3>Apollo</h3>
                         <h4>Running Shot</h4>
                         <p>$50.00</p>
-                        <SizeAndColor/>
                     </div>
                     <div className="item-image-wrap">
                         <div className="item-image">
