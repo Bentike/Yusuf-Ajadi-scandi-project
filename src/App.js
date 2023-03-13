@@ -190,6 +190,7 @@ class App extends Component {
           element={
             <Tech
               currencies={this.state.currencies}
+              currency={this.state.selectedCurrency}
               techProducts={this.state.techProducts}
               productClick={handleProductClick}
               handleCurrencyChange={handleCurrencyChange}
