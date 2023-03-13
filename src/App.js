@@ -99,9 +99,9 @@ class App extends Component {
     // this method will be passed as a prop to Product.jXs
     const handleProductClick = (item) => {
       let product = this.state.allProducts.find((prod) => prod.name === item);
-      product.quantity = 1;
+      let updatedProduct = Object.assign({}, product, {quantity: 1}, {size: 100});
       this.setState({
-        selectedProduct: product,
+        selectedProduct: updatedProduct,
       });
     };
 
@@ -115,7 +115,13 @@ class App extends Component {
     // this method add items to the cart
     // it is passed as a prop to ProductDescription.js
     const addToCart = () => {
-      if(this.state.cart.includes(this.state.selectedProduct)) console.log("Item already in cart...");
+      for(let item of this.state.cart){
+        if(JSON.stringify(item) === JSON.stringify(this.state.selectedProduct)){
+           console.log("Item already in cart");
+           return;
+        }
+      }
+
       if (
         (this.state.selectedProduct.category === "clothes" &&
           !this.state.selectedSize) ||
@@ -143,6 +149,7 @@ class App extends Component {
         selectedSize: size,
         selectedProduct: newProductSize,
       });
+      console.log(this.state.selectedProduct);
     };
 
     // this method gets the selected color attribute of a product and sets it's value to this.state.selectedColor
