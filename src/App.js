@@ -154,7 +154,6 @@ class App extends Component {
         selectedSize: size,
         selectedProduct: newProductSize,
       });
-      console.log(this.state.selectedProduct);
     };
 
     // this method gets the selected color attribute of a product and sets it's value to this.state.selectedColor
