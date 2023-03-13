@@ -203,6 +203,7 @@ class App extends Component {
           element={
             <Clothes
               currencies={this.state.currencies}
+              currency={this.state.selectedCurrency}
               clotheProducts={this.state.clotheProducts}
               productClick={handleProductClick}
               handleCurrencyChange={handleCurrencyChange}
