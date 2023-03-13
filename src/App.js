@@ -231,6 +231,7 @@ class App extends Component {
           element={
             <CartPage
               currencies={this.state.currencies}
+              currency={this.state.selectedCurrency}
               handleCurrencyChange={handleCurrencyChange}
               selectedCurrency={this.state.selectedCurrency}
               cart={this.state.cart}

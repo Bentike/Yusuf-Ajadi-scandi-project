@@ -15,19 +15,28 @@ class CartPage extends Component {
         />
         <h2 className="cart-header">CART</h2>
         <hr />
-        {this.props.cart.map(item => {
-          const {name, brand, quantity, gallery, prices} = item;
+        {this.props.cart.map((item) => {
+          const { name, brand, quantity, gallery, prices } = item;
           let image = gallery[0];
-          let amount = prices[0].amount;
-          // let amount;
-          // let symbol;
-          // for (let i = 0; i < prices.length; i++) {
-          //   if (prices[i].currency.symbol === this.props.SelectedCurrency) {
-          //     amount = prices[i].amount;
-          //     symbol = prices[i].currency.symbol;
-          //   }
-          // }
-          return <CartItem key={name} name={name} brand={brand} quantity={quantity} image={image} price={amount}/>
+          let amount;
+          let symbol;
+          for (let i = 0; i < prices.length; i++) {
+            if (prices[i].currency.symbol === this.props.currency) {
+              amount = prices[i].amount;
+              symbol = prices[i].currency.symbol;
+            }
+          }
+          return (
+            <CartItem
+              key={name}
+              name={name}
+              brand={brand}
+              quantity={quantity}
+              image={image}
+              symbol={symbol}
+              price={amount}
+            />
+          );
         })}
         <Checkout />
       </div>

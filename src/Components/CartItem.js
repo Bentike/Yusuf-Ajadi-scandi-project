@@ -10,7 +10,7 @@ class CartItem extends Component {
                     <div>
                         <h3>{this.props.name}</h3>
                         <h4>{this.props.brand}</h4>
-                        <p>{this.props.price}</p>
+                        <p>{this.props.symbol}{this.props.price}</p>
                     </div>
                     <div className="item-image-wrap">
                         <div className="item-image">
