@@ -181,6 +181,7 @@ class App extends Component {
               productClick={handleProductClick}
               handleCurrencyChange={handleCurrencyChange}
               selectedCurrency={this.state.selectedCurrency}
+              currency={this.state.selectedCurrency}
             />
           }
         />

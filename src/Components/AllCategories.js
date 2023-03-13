@@ -19,13 +19,22 @@ class AllCategories extends Component {
               product;
             let image = gallery[0];
             let price = prices[0].amount;
+            let amount;
+            let symbol;
+            for (let i = 0; i < prices.length; i++) {
+              if (prices[i].currency.symbol === this.props.currency) {
+                amount = prices[i].amount;
+                symbol = prices[i].currency.symbol;
+              }
+            }
             return (
               <Product
                 key={id}
                 photo={image}
                 productName={name}
-                productPrice={price}
+                productPrice={amount}
                 handleProductClick={this.props.productClick}
+                symbol={symbol}
               />
             );
           })}
