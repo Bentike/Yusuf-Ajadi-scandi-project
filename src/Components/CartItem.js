@@ -1,6 +1,7 @@
 import React, {Component} from "react";
-import wool from '../Images/wool.png';
 import '../Styles/CartItem.css';
+import Colors from "./Colors";
+import Sizes from "./Sizes";
 
 class CartItem extends Component {
     render(){
@@ -11,6 +12,12 @@ class CartItem extends Component {
                         <h3>{this.props.name}</h3>
                         <h4>{this.props.brand}</h4>
                         <p>{this.props.symbol}{this.props.price}</p>
+                        {/* to be continued on Creating Unique kEYS */}
+                        {this.props.sizes ? this.props.sizes.map(item => {
+                           return <Sizes key={item.id} size={item.value} setSize={this.props.setSize}/>
+                        }) : this.props.colors ? this.props.colors.map(color => {
+                            return <Colors key={color.id} color={color.value} setColor={this.props.setColor}/> 
+                        }) : ""}
                     </div>
                     <div className="item-image-wrap">
                         <div className="item-image">
