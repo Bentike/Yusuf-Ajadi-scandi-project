@@ -4,6 +4,7 @@ import '../Styles/CartItem.css';
 
 class CartItem extends Component {
     render(){
+        console.log(this.props.cart);
         return(
             <div className="cart">
                 <div className="cart-item">

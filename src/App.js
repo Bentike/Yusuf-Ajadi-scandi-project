@@ -102,8 +102,7 @@ class App extends Component {
       let updatedProduct = Object.assign(
         {},
         product,
-        { quantity: 1 },
-        { size: 100 }
+        { quantity: 1 }
       );
       this.setState({
         selectedProduct: updatedProduct,
