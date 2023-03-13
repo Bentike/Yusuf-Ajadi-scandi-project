@@ -99,7 +99,12 @@ class App extends Component {
     // this method will be passed as a prop to Product.jXs
     const handleProductClick = (item) => {
       let product = this.state.allProducts.find((prod) => prod.name === item);
-      let updatedProduct = Object.assign({}, product, {quantity: 1}, {size: 100});
+      let updatedProduct = Object.assign(
+        {},
+        product,
+        { quantity: 1 },
+        { size: 100 }
+      );
       this.setState({
         selectedProduct: updatedProduct,
       });
@@ -115,10 +120,12 @@ class App extends Component {
     // this method add items to the cart
     // it is passed as a prop to ProductDescription.js
     const addToCart = () => {
-      for(let item of this.state.cart){
-        if(JSON.stringify(item) === JSON.stringify(this.state.selectedProduct)){
-           console.log("Item already in cart");
-           return;
+      for (let item of this.state.cart) {
+        if (
+          JSON.stringify(item) === JSON.stringify(this.state.selectedProduct)
+        ) {
+          console.log("Item already in cart");
+          return;
         }
       }
 
@@ -136,7 +143,7 @@ class App extends Component {
         cart: this.state.cart.concat(this.state.selectedProduct),
       });
 
-      console.log(this.state.cart)
+      console.log(this.state.cart);
     };
 
     // this method gets the selected Size attribute of a product and sets it's value to this.state.selectedSize
@@ -144,7 +151,9 @@ class App extends Component {
     // this method will be passed from ProductDescrition.js to Sizes.js as a prop where it will be called.
     const setSelectedSize = (size) => {
       let selectedProductSize = this.state.selectedProduct;
-      let newProductSize = Object.assign({}, selectedProductSize, {size: size});
+      let newProductSize = Object.assign({}, selectedProductSize, {
+        size: size,
+      });
       this.setState({
         selectedSize: size,
         selectedProduct: newProductSize,
@@ -157,7 +166,9 @@ class App extends Component {
     // this method will be passed from ProductDescrition.js to Colors.js as a prop where it will be called.
     const setSelectedColor = (color) => {
       let selectedProductColor = this.state.selectedProduct;
-      let newProductColor = Object.assign({}, selectedProductColor, {color: color});
+      let newProductColor = Object.assign({}, selectedProductColor, {
+        color: color,
+      });
       this.setState({
         selectedColor: color,
         selectedProduct: newProductColor,
