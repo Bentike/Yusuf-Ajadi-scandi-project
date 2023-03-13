@@ -232,6 +232,7 @@ class App extends Component {
               currencies={this.state.currencies}
               handleCurrencyChange={handleCurrencyChange}
               selectedCurrency={this.state.selectedCurrency}
+              cart={this.state.cart}
             />
           }
         />
