@@ -115,20 +115,7 @@ class App extends Component {
     // this method add items to the cart
     // it is passed as a prop to ProductDescription.js
     const addToCart = () => {
-      // for (let item of this.state.cart) {
-      //   if (item.category === "clothes" && this.state.selectedProduct.category === "clothes"){
-      //       //  if(item.size === this.state.selectedProduct.size){
-      //       //   console.log("Item already in cart");
-      //       //   return;
-      //       //  }
-      //   }
-      //   if(item.category === "clothes" && this.state.selectedProduct.category === "tech"){
-      //     if(item.color === this.state.selectedProduct.color){
-      //       console.log("Item already in cart");
-      //       return;
-      //      }
-      //   }
-      // }
+      if(this.state.cart.includes(this.state.selectedProduct)) console.log("Item already in cart...");
       if (
         (this.state.selectedProduct.category === "clothes" &&
           !this.state.selectedSize) ||
@@ -142,6 +129,8 @@ class App extends Component {
       this.setState({
         cart: this.state.cart.concat(this.state.selectedProduct),
       });
+
+      console.log(this.state.cart)
     };
 
     // this method gets the selected Size attribute of a product and sets it's value to this.state.selectedSize
@@ -161,12 +150,11 @@ class App extends Component {
     // this method will be passed from ProductDescrition.js to Colors.js as a prop where it will be called.
     const setSelectedColor = (color) => {
       let selectedProductColor = this.state.selectedProduct;
-      selectedProductColor.color = color;
+      let newProductColor = Object.assign({}, selectedProductColor, {color: color});
       this.setState({
         selectedColor: color,
-        selectedProduct: selectedProductColor,
+        selectedProduct: newProductColor,
       });
-      console.log(this.state.selectedProduct);
     };
 
     return (
