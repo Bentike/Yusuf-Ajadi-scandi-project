@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import SizeAndColor from "./SizeAndColor";
 import wool from '../Images/wool.png';
 import '../Styles/CartItem.css';
 
