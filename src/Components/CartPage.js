@@ -14,7 +14,12 @@ class CartPage extends Component {
         />
         <h2 className="cart-header">CART</h2>
         <hr />
-        <CartItem cart={this.props.cart}/>
+        {this.props.cart.map(item => {
+          const {name, brand, quantity, gallery, prices} = item;
+          let image = gallery[0];
+          let price = prices[0].amount;
+          return <CartItem name={name} brand={brand} quantity={quantity} image={image} price={price}/>
+        })}
         <Checkout />
       </div>
     );
