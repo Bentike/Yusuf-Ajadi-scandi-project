@@ -18,7 +18,6 @@ class AllCategories extends Component {
             const { id, name, brand, description, gallery, inStock, prices } =
               product;
             let image = gallery[0];
-            let price = prices[0].amount;
             let amount;
             let symbol;
             for (let i = 0; i < prices.length; i++) {
