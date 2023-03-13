@@ -12,11 +12,11 @@ class CartItem extends Component {
                         <h3>{this.props.name}</h3>
                         <h4>{this.props.brand}</h4>
                         <p>{this.props.symbol}{this.props.price}</p>
-                        {/* to be continued on Creating Unique kEYS */}
-                        {this.props.sizes ? this.props.sizes.map(item => {
-                           return <Sizes key={item.id} size={item.value} setSize={this.props.setSize}/>
-                        }) : this.props.colors ? this.props.colors.map(color => {
-                            return <Colors key={color.id} color={color.value} setColor={this.props.setColor}/> 
+                        {/* to verify if index work for keys Insha Allah */}
+                        {this.props.sizes ? this.props.sizes.map((item, idx) => {
+                           return <Sizes key={idx} size={item.value} setSize={this.props.setSize}/>
+                        }) : this.props.colors ? this.props.colors.map((color, idx) => {
+                            return <Colors key={idx} color={color.value} setColor={this.props.setColor}/> 
                         }) : ""}
                     </div>
                     <div className="item-image-wrap">
