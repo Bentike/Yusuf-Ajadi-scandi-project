@@ -16,16 +16,16 @@ class CartPage extends Component {
         <h2 className="cart-header">CART</h2>
         <hr />
         {this.props.cart.map((item) => {
-          const { name, brand, quantity, gallery, prices, attributes } = item;
+          const { name, brand, quantity, gallery, prices, attributes, size } = item;
           let sizes = [];
           let colors = [];
-          if(item.category === "clothes"){
+          if(item.category === "clothes"){ 
             colors = null;
            sizes = item.attributes[0].items;
           }else if(item.category === "tech"){
             sizes = null;
            if (attributes.length) {
-             for (let attr of attributes) {
+             for (let attr of attributes){
                if (attr.id === "Color") colors = attr.items;
                continue;
              }
@@ -50,6 +50,7 @@ class CartPage extends Component {
               symbol={symbol}
               price={amount}
               sizes={sizes}
+              size={size}
               colors={colors}
               setSize={this.props.setSize}
               setColor={this.props.setColor}
