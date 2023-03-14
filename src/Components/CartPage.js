@@ -16,7 +16,7 @@ class CartPage extends Component {
         <h2 className="cart-header">CART</h2>
         <hr />
         {this.props.cart.map((item) => {
-          const { name, brand, quantity, gallery, prices, attributes, size } = item;
+          const { name, brand, quantity, gallery, prices, attributes, size, color } = item;
           let sizes = [];
           let colors = [];
           if(item.category === "clothes"){ 
@@ -52,6 +52,7 @@ class CartPage extends Component {
               sizes={sizes}
               size={size}
               colors={colors}
+              color={color}
               setSize={this.props.setSize}
               setColor={this.props.setColor}
             />

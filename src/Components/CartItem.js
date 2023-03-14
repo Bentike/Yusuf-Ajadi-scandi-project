@@ -8,6 +8,19 @@ const style = { width: "35px", height: "28px", margin: "0 2px" };
 
 class CartItem extends Component {
   render() {
+
+    const hexToRgb = (hex) => {
+      let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      let newResult = {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+       }
+      let finalResult = "rgb(" + newResult.r + ", " + newResult.g + ", " + newResult.b + ")";
+      return finalResult;
+    }
+    
+
     return (
       <div className="cart">
         <div className="cart-item">
@@ -38,12 +51,22 @@ class CartItem extends Component {
                   })
                 : this.props.colors
                 ? this.props.colors.map((color) => {
+                  console.log(this.props.color)
+                  console.log(hexToRgb(color.value))
                     return (
-                      <Colors
-                        key={uniqid()}
-                        color={color.value}
-                        setColor={this.props.setColor}
-                      />
+                      <div
+                        className={
+                          color.value === this.props.color ? "selected-color" : ""
+                        }
+
+                        style={style}
+                      >
+                        <Colors
+                          key={uniqid()}
+                          color={color.value}
+                          setColor={this.props.setColor}
+                        />
+                      </div>
                     );
                   })
                 : ""}
