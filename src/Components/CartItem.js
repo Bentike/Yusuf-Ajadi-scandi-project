@@ -16,6 +16,7 @@ class CartItem extends Component {
               {this.props.symbol}
               {this.props.price}
             </p>
+            <div style={{display: "flex"}}>
             {this.props.sizes
               ? this.props.sizes.map((item) => {
                   return (
@@ -35,6 +36,7 @@ class CartItem extends Component {
                   );
                 })
               : ""}
+            </div>  
           </div>
           <div className="item-image-wrap">
             <div className="item-image">
