@@ -4,6 +4,8 @@ import "../Styles/CartItem.css";
 import Colors from "./Colors";
 import Sizes from "./Sizes";
 
+const style = { width: "35px", height: "28px", margin: "0 2px" };
+
 class CartItem extends Component {
   render() {
     return (
@@ -16,29 +18,36 @@ class CartItem extends Component {
               {this.props.symbol}
               {this.props.price}
             </p>
-            <div style={{display: "flex"}}>
-            {this.props.sizes
-              ? this.props.sizes.map((item) => {
-                  return (
-                    <Sizes
-                      key={uniqid()}
-                      size={item.value}
-                      setSize={this.props.setSize}
-                    />
-                  );
-                })
-              : this.props.colors
-              ? this.props.colors.map((color) => {
-                  return (
-                    <Colors
-                      key={uniqid()}
-                      color={color.value}
-                      setColor={this.props.setColor}
-                    />
-                  );
-                })
-              : ""}
-            </div>  
+            <div style={{ display: "flex" }}>
+              {this.props.sizes
+                ? this.props.sizes.map((item) => {
+                    return (
+                      <div
+                        className={
+                          item.value === this.props.size ? "selected-size" : ""
+                        }
+                        style={style}
+                      >
+                        <Sizes
+                          key={uniqid()}
+                          size={item.value}
+                          setSize={this.props.setSize}
+                        />
+                      </div>
+                    );
+                  })
+                : this.props.colors
+                ? this.props.colors.map((color) => {
+                    return (
+                      <Colors
+                        key={uniqid()}
+                        color={color.value}
+                        setColor={this.props.setColor}
+                      />
+                    );
+                  })
+                : ""}
+            </div>
           </div>
           <div className="item-image-wrap">
             <div className="item-image">
