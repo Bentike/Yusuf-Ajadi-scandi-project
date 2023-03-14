@@ -51,6 +51,8 @@ class CartPage extends Component {
               price={amount}
               sizes={sizes}
               colors={colors}
+              setSize={this.props.setSize}
+              setColor={this.props.setColor}
             />
           );
         })}
