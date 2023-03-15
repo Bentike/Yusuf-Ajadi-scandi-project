@@ -51,15 +51,11 @@ class CartItem extends Component {
                   })
                 : this.props.colors
                 ? this.props.colors.map((color) => {
-                  console.log(this.props.color)
-                  console.log(hexToRgb(color.value))
                     return (
                       <div
                         className={
-                          color.value === this.props.color ? "selected-color" : ""
+                          hexToRgb(color.value) === this.props.color ? "selected-color" : ""
                         }
-
-                        style={style}
                       >
                         <Colors
                           key={uniqid()}
