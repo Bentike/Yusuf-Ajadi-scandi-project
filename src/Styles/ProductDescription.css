@@ -80,6 +80,13 @@
     transform: scale(1.1);
 }
 
+.selected-color-cart{
+    border: 3px solid #000;
+    min-width: 30px;
+    height: 25px;
+    margin: 0 4px;
+}
+
 button{
     padding: 10px;
     width: 200px;

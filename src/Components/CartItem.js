@@ -54,7 +54,7 @@ class CartItem extends Component {
                     return (
                       <div
                         className={
-                          hexToRgb(color.value) === this.props.color ? "selected-color" : ""
+                          hexToRgb(color.value) === this.props.color ? "selected-color-cart" : ""
                         }
                       >
                         <Colors
