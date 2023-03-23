@@ -8,7 +8,14 @@ const style = { width: "35px", height: "28px", margin: "0 2px" };
 
 class CartItem extends Component {
   render() {
+   
+    const increaseItem = () => {
+      console.log("Item plus one");
+    }
 
+    const decreaseItem = () => {
+      console.log("Item minus one");
+    }
     const hexToRgb = (hex) => {
       let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
       let newResult = {
