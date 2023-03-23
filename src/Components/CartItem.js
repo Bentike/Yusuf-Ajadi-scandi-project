@@ -8,25 +8,24 @@ const style = { width: "35px", height: "28px", margin: "0 2px" };
 
 class CartItem extends Component {
   render() {
-   
     const increaseItem = () => {
       console.log("Item plus one");
-    }
+    };
 
     const decreaseItem = () => {
       console.log("Item minus one");
-    }
+    };
     const hexToRgb = (hex) => {
       let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
       let newResult = {
         r: parseInt(result[1], 16),
         g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16)
-       }
-      let finalResult = "rgb(" + newResult.r + ", " + newResult.g + ", " + newResult.b + ")";
+        b: parseInt(result[3], 16),
+      };
+      let finalResult =
+        "rgb(" + newResult.r + ", " + newResult.g + ", " + newResult.b + ")";
       return finalResult;
-    }
-    
+    };
 
     return (
       <div className="cart">
@@ -61,7 +60,9 @@ class CartItem extends Component {
                     return (
                       <div
                         className={
-                          hexToRgb(color.value) === this.props.color ? "selected-color-cart" : ""
+                          hexToRgb(color.value) === this.props.color
+                            ? "selected-color-cart"
+                            : ""
                         }
                       >
                         <Colors
@@ -77,13 +78,13 @@ class CartItem extends Component {
           </div>
           <div className="item-image-wrap">
             <div className="item-image">
-              <button className="cart-btn">
+              <button className="cart-btn" onClick={increaseItem}>
                 <span className="text">+</span>
               </button>
               <button className="quantity">
                 <span className="text">{this.props.quantity}</span>
               </button>
-              <button className="cart-btn">
+              <button className="cart-btn" onClick={decreaseItem}>
                 <span className="text">-</span>
               </button>
             </div>
