@@ -71,13 +71,13 @@ class CartItem extends Component {
           </div>
           <div className="item-image-wrap">
             <div className="item-image">
-              <button className="cart-btn" onClick={increaseItem}>
+              <button className="cart-btn" onClick={this.props.increaseItem}>
                 <span className="text">+</span>
               </button>
               <button className="quantity">
                 <span className="text">{this.props.quantity}</span>
               </button>
-              <button className="cart-btn" onClick={decreaseItem}>
+              <button className="cart-btn" onClick={this.props.decreaseItem}>
                 <span className="text">-</span>
               </button>
             </div>

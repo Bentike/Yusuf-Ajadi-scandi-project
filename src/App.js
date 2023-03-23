@@ -171,7 +171,7 @@ class App extends Component {
     };
 
     const increaseItem = () => {
-      console.log(this.props.quantity);
+      console.log("Item plus one");
     };
 
     const decreaseItem = () => {
