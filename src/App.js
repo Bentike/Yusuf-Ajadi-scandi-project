@@ -245,6 +245,8 @@ class App extends Component {
               cart={this.state.cart}
               setSize={setSelectedSize}
               setColor={setSelectedColor}
+              incrementItem={increaseItem}
+              decrementItem={decreaseItem}
             />
           }
         />

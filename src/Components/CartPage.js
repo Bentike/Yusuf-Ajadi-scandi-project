@@ -55,6 +55,8 @@ class CartPage extends Component {
               color={color}
               setSize={this.props.setSize}
               setColor={this.props.setColor}
+              increaseItem={this.props.incrementItem}
+              decreaseItem={this.props.decrementItem}
             />
           );
         })}
