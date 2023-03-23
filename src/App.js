@@ -170,6 +170,14 @@ class App extends Component {
       });
     };
 
+    const increaseItem = () => {
+      console.log(this.props.quantity);
+    };
+
+    const decreaseItem = () => {
+      console.log("Item minus one");
+    };
+
     return (
       <Routes>
         <Route
