@@ -170,6 +170,7 @@ class App extends Component {
       });
     };
 
+    // To work on Incrementing and Decrementing Item function Insha Allah
     const increaseItem = () => {
       console.log("Item plus one");
     };
