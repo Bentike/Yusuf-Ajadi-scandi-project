@@ -50,7 +50,7 @@ class CartItem extends Component {
                 : this.props.colors
                 ? this.props.colors.map((color) => {
                     return (
-                      <div
+                      <div key={color.value}
                         className={
                           hexToRgb(color.value) === this.props.color
                             ? "selected-color-cart"
