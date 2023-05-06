@@ -33,14 +33,14 @@ class CartItem extends Component {
               {this.props.sizes
                 ? this.props.sizes.map((item) => {
                     return (
-                      <div
+                      <div key={item.value}
                         className={
                           item.value === this.props.size ? "selected-size" : ""
                         }
                         style={style}
                       >
                         <Sizes
-                        
+                          key={item.value}
                           size={item.value}
                           setSize={this.props.setSize}
                         />
@@ -58,6 +58,7 @@ class CartItem extends Component {
                         }
                       >
                         <Colors
+                          key={color.value}
                           color={color.value}
                           setColor={this.props.setColor}
                         />

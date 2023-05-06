@@ -42,7 +42,7 @@ class CartPage extends Component {
           }
           return (
             <CartItem
-              key={name}
+              key={size}
               name={name}
               brand={brand}
               quantity={quantity}
