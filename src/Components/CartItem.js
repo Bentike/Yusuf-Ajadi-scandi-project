@@ -41,7 +41,7 @@ class CartItem extends Component {
                         style={style}
                       >
                         <Sizes
-                          key={uniqid()}
+                        
                           size={item.value}
                           setSize={this.props.setSize}
                         />
@@ -59,7 +59,6 @@ class CartItem extends Component {
                         }
                       >
                         <Colors
-                          key={uniqid()}
                           color={color.value}
                           setColor={this.props.setColor}
                         />
