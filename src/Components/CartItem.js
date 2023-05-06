@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import uniqid from "uniqid";
 import "../Styles/CartItem.css";
 import Colors from "./Colors";
 import Sizes from "./Sizes";
