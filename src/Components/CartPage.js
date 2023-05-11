@@ -41,7 +41,7 @@ class CartPage extends Component {
             }
           }
           return (
-            <CartItem
+            <CartItem 
               key={size || color}
               name={name}
               brand={brand}
@@ -57,7 +57,7 @@ class CartPage extends Component {
               setColor={this.props.setColor}
               increaseItem={this.props.incrementItem}
               decreaseItem={this.props.decrementItem}
-            />
+            /> 
           );
         })}
         <Checkout />
