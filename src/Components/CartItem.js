@@ -70,7 +70,7 @@ class CartItem extends Component {
           </div>
           <div className="item-image-wrap">
             <div className="item-image">
-              <button className="cart-btn" onClick={() => this.props.increaseItem(this.props.size, this.props.color)}>
+              <button className="cart-btn" onClick={() => this.props.increaseItem(this.props.size)}>
                 <span className="text">+</span>
               </button>
               <button className="quantity">
