@@ -177,11 +177,16 @@ class App extends Component {
      this.setState({
        cart: this.state.cart
      })
-     console.log(product);
     };
 
-    const decreaseItem = () => {
-      console.log("Item minus one");
+    const decreaseItem = (size) => {
+      let product = this.state.cart.find(item => item.size === size);
+      if(product.quantity >= 1){
+        product.quantity -= 1;
+      }
+      this.setState({
+        cart: this.state.cart
+      })
     };
 
     return (

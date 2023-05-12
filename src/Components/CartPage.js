@@ -5,9 +5,6 @@ import Checkout from "./Checkout";
 import "../Styles/Cart.css";
 
 class CartPage extends Component {
-  componentDidUpdate(){
-    console.log("Cart Page Just Updated")
-  }
   render() {
     return (
       <div className="category">
