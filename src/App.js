@@ -99,11 +99,7 @@ class App extends Component {
     // this method will be passed as a prop to Product.jXs
     const handleProductClick = (item) => {
       let product = this.state.allProducts.find((prod) => prod.name === item);
-      let updatedProduct = Object.assign(
-        {},
-        product,
-        { quantity: 1 }
-      );
+      let updatedProduct = Object.assign({}, product, { quantity: 1 });
       this.setState({
         selectedProduct: updatedProduct,
       });
@@ -121,10 +117,24 @@ class App extends Component {
     const addToCart = () => {
       for (let item of this.state.cart) {
         if (
-          JSON.stringify(item) === JSON.stringify(this.state.selectedProduct)
+          item.category === "clothes" &&
+          this.state.selectedProduct.category === "clothes"
         ) {
-          console.log("Item already in cart");
-          return;
+          if (item.size === this.state.selectedProduct.size) {
+            console.log("Item already in cart");
+            return;
+          }
+        } else if (
+          item.category === "tech" &&
+          this.state.selectedProduct.category === "tech"
+        ) {
+          if (
+            item.color === this.state.selectedProduct.color &&
+            item.name === this.state.selectedProduct.name
+          ) {
+            console.log("Item already in cart");
+            return;
+          }
         }
       }
       if (
@@ -140,6 +150,8 @@ class App extends Component {
       this.setState({
         cart: this.state.cart.concat(this.state.selectedProduct),
       });
+      // Debugging...
+      console.log(this.state.cart);
     };
 
     // this method gets the selected Size attribute of a product and sets it's value to this.state.selectedSize
@@ -172,21 +184,21 @@ class App extends Component {
 
     // To work on Incrementing and Decrementing Item function Insha Allah
     const increaseItem = (size) => {
-     let product = this.state.cart.find(item => item.size === size);
-     product.quantity += 1;
-     this.setState({
-       cart: this.state.cart
-     })
+      let product = this.state.cart.find((item) => item.size === size);
+      product.quantity += 1;
+      this.setState({
+        cart: this.state.cart,
+      });
     };
 
     const decreaseItem = (size) => {
-      let product = this.state.cart.find(item => item.size === size);
-      if(product.quantity >= 1){
+      let product = this.state.cart.find((item) => item.size === size);
+      if (product.quantity >= 1) {
         product.quantity -= 1;
       }
       this.setState({
-        cart: this.state.cart
-      })
+        cart: this.state.cart,
+      });
     };
 
     return (

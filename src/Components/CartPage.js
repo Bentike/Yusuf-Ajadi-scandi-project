@@ -16,7 +16,7 @@ class CartPage extends Component {
         <h2 className="cart-header">CART</h2>
         <hr />
         {this.props.cart.map((item) => {
-          const { name, brand, quantity, gallery, prices, attributes, size, color } = item;
+          const { category, name, brand, quantity, gallery, prices, attributes, size, color } = item;
           let sizes = [];
           let colors = [];
           if(item.category === "clothes"){ 
@@ -42,7 +42,7 @@ class CartPage extends Component {
           }
           return (
             <CartItem 
-              key={size || color}
+              key={category === "clothes" ? name + size : name + color}
               name={name}
               brand={brand}
               quantity={quantity}
