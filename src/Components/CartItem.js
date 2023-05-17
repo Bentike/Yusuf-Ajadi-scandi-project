@@ -76,7 +76,7 @@ class CartItem extends Component {
               <button className="quantity">
                 <span className="text">{this.props.quantity}</span>
               </button>
-              <button className="cart-btn" onClick={() => this.props.decreaseItem(this.props.size)}>
+              <button className="cart-btn" onClick={() => this.props.decreaseItem(this.props.size, this.props.color)}>
                 <span className="text">-</span>
               </button>
             </div>
