@@ -183,8 +183,11 @@ class App extends Component {
     };
 
     // To work on Incrementing and Decrementing Item function Insha Allah
-    const increaseItem = (size) => {
-      let product = this.state.cart.find((item) => item.size === size);
+    const increaseItem = (size, color) => {
+      let product = this.state.cart.find((item) => {
+          if(item.size) return item.size === size;
+          else return item.color === color;
+      });
       product.quantity += 1;
       this.setState({
         cart: this.state.cart,
