@@ -73,7 +73,7 @@ class Navbar extends Component {
               <NavLink onClick={showOverlay}>
                 <img src={cart} alt="cart-logo" />
                 <p className="amount" ref={this.amountRef}>
-                  3
+                  {this.props.cartLength}
                 </p>
               </NavLink>
             </div>
