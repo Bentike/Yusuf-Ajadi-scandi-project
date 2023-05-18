@@ -196,11 +196,11 @@ class App extends Component {
       });
     };
 
-    const decreaseItem = (size, color) => {
+    const decreaseItem = (size, color, name) => {
       let product = this.state.cart.find((item) => {
         if (item.size) return item.size === size;
         if (item.color) return item.color === color;
-        else return item;
+        else return item.name === name;
       });
       if (product.quantity >= 1) {
         product.quantity -= 1;
