@@ -198,8 +198,8 @@ class App extends Component {
 
     const decreaseItem = (size, color, name) => {
       let product = this.state.cart.find((item) => {
-        if (item.size) return item.size === size;
-        if (item.color) return item.color === color;
+        if (item.size) return item.size === size && item.name === name;
+        if (item.color) return item.color === color && item.name === name;
         else return item.name === name;
       });
       if (product.quantity >= 1) {
