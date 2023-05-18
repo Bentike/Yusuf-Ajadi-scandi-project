@@ -141,12 +141,13 @@ class App extends Component {
         (this.state.selectedProduct.category === "clothes" &&
           !this.state.selectedSize) ||
         (this.state.selectedProduct.category === "tech" &&
-          this.state.selectedProduct.attributes &&
+          !this.state.selectedProduct.attributes &&
           !this.state.selectedColor)
       ) {
         console.log("please select a color or size");
         return;
       }
+
       this.setState({
         cart: this.state.cart.concat(this.state.selectedProduct),
       });
@@ -185,8 +186,8 @@ class App extends Component {
     // To work on Incrementing and Decrementing Item function Insha Allah
     const increaseItem = (size, color) => {
       let product = this.state.cart.find((item) => {
-          if(item.size) return item.size === size;
-          else return item.color === color;
+        if (item.size) return item.size === size;
+        else return item.color === color;
       });
       product.quantity += 1;
       this.setState({
@@ -196,9 +197,9 @@ class App extends Component {
 
     const decreaseItem = (size, color) => {
       let product = this.state.cart.find((item) => {
-        if(item.size) return item.size === size;
+        if (item.size) return item.size === size;
         else return item.color === color;
-     });
+      });
       if (product.quantity >= 1) {
         product.quantity -= 1;
       }
