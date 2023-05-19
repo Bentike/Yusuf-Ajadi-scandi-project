@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import photo from "../Images/wool.png"
 import CartOverlaySize from "./CartOverlaySize";
+import CartOverlayColor from "./CartOverlayColor";
 
 
 class OverlayCartItems extends Component {
@@ -13,11 +14,7 @@ class OverlayCartItems extends Component {
           <p className="size">size</p>
           <CartOverlaySize/>
           <p className="cartColor">color</p>
-          <div className="cartColors">
-            <div className="overlayColors"></div>
-            <div className="overlayColors"></div>
-            <div className="overlayColors"></div>
-          </div>
+          <CartOverlayColor/>
         </div>
         <div className="controlWrap">
           <div className="cartBtnDiv">
