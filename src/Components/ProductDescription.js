@@ -37,6 +37,7 @@ class ProductDescription extends Component {
           handleCurrencyChange={this.props.handleCurrencyChange}
           selectedCurrency={this.props.selectedCurrency}
           cartLength={this.props.length}
+          cart={this.props.cart}
         />
         <div className="product">
           <div className="product-wrapper">
