@@ -9,8 +9,8 @@ class OverlayCartItems extends Component {
     return (
       <div className="overlayCartWrap">
         <div>
-          <p className="cartOverlayItemName">Apollo Running Short</p>
-          <p className="cartOverlayPrice">$50.00</p>
+          <p className="cartOverlayItemName">{this.props.name}</p>
+          <p className="cartOverlayPrice">${this.props.price}</p>
           <p className="size">size</p>
           <CartOverlaySize/>
           <p className="cartColor">color</p>
@@ -23,7 +23,7 @@ class OverlayCartItems extends Component {
             <button className="overlayCartBtn">-</button>
           </div>
           <div>
-            <img src={photo} alt="item" className="overlayCartImg" />
+            <img src={this.props.photo} alt="item" className="overlayCartImg" />
           </div>
         </div>
       </div>
