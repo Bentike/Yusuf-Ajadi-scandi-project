@@ -223,6 +223,7 @@ class App extends Component {
               selectedCurrency={this.state.selectedCurrency}
               currency={this.state.selectedCurrency}
               length={this.state.cart.length}
+              cart={this.state.cart}
             />
           }
         />
@@ -237,6 +238,7 @@ class App extends Component {
               handleCurrencyChange={handleCurrencyChange}
               selectedCurrency={this.state.selectedCurrency}
               length={this.state.cart.length}
+              cart={this.state.cart}
             />
           }
         />
@@ -251,6 +253,7 @@ class App extends Component {
               handleCurrencyChange={handleCurrencyChange}
               selectedCurrency={this.state.selectedCurrency}
               length={this.state.cart.length}
+              cart={this.state.cart}
             />
           }
         />
@@ -267,6 +270,7 @@ class App extends Component {
               setSize={setSelectedSize}
               setColor={setSelectedColor}
               length={this.state.cart.length}
+              cart={this.state.cart}
             />
           }
         />
