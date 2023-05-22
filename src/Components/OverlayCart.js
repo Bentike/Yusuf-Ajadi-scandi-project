@@ -12,7 +12,7 @@ class OverlayCart extends Component {
         </h5>
         {this.props.cart.map((item, idx) => {
           console.log(item);
-           return <OverlayCartItems key={idx} name={item.name} price={item.price} photo={item.gallery[0]} />
+           return <OverlayCartItems key={idx} name={item.name} price={item.prices[0].amount} photo={item.gallery[0]} />
         })}
         <MiniCheckout/>
       </div>
