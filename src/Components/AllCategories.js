@@ -12,6 +12,7 @@ class AllCategories extends Component {
           handleCurrencyChange={this.props.handleCurrencyChange}
           selectedCurrency={this.props.selectedCurrency}
           cartLength={this.props.length}
+          cart={this.props.cart}
         />
         <h2 className="header">All Categories</h2>
         <div className="product-container">
