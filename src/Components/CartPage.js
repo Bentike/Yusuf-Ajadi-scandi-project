@@ -13,6 +13,7 @@ class CartPage extends Component {
           handleCurrencyChange={this.props.handleCurrencyChange}
           selectedCurrency={this.props.selectedCurrency}
           cartLength={this.props.length}
+          cart={this.props.cart}
         />
         <h2 className="cart-header">CART</h2>
         <hr />
