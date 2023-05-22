@@ -84,7 +84,7 @@ class Navbar extends Component {
           style={{ display: this.state.overlay ? "block" : "none" }}
         >
           <div className="overlay-card">
-            <OverlayCart />
+            <OverlayCart cart={this.props.cart}/>
           </div>
         </div>
       </div>
