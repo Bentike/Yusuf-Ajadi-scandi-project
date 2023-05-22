@@ -10,7 +10,10 @@ class OverlayCart extends Component {
         <h5 className="myBag">
           My Bag,<span className="overlayCartItem"> {this.props.cart.length} {this.props.cart.length < 2 ? "item" : "items"}</span>
         </h5>
-        <OverlayCartItems/>
+        {this.props.cart.map((item, idx) => {
+          console.log(item);
+           return <OverlayCartItems key={idx} name={item.name} price={item.price} photo={item.gallery[0]} />
+        })}
         <MiniCheckout/>
       </div>
     );
