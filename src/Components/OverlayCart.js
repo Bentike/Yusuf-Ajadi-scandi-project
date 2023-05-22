@@ -8,7 +8,7 @@ class OverlayCart extends Component {
     return (
       <div className="miniCartWrap">
         <h5 className="myBag">
-          My Bag,<span className="overlayCartItem"> 3 items</span>
+          My Bag,<span className="overlayCartItem"> {this.props.cart.length} items</span>
         </h5>
         <OverlayCartItems/>
         <MiniCheckout/>
