@@ -16,7 +16,7 @@ class OverlayCart extends Component {
           </span>
         </h5>
         {this.props.cart.map((item, idx) => {
-           const { category, name, brand, quantity, gallery, prices, attributes, size, color } = item;
+           const { category, name, quantity, gallery, prices, attributes, size, color } = item;
            let sizes = [];
            let colors = [];
            if(item.category === "clothes"){ 
@@ -49,6 +49,8 @@ class OverlayCart extends Component {
               quantity={quantity}
               photo={image}
               size={size}
+              sizes={sizes}
+              colors={colors}
               color={color}
               increaseItem={this.props.incrementItem}
               decreaseItem={this.props.decrementItem}
