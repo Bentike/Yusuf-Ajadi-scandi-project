@@ -15,6 +15,7 @@ class AllCategories extends Component {
           cart={this.props.cart}
           increment={this.props.increment}
           decrement={this.props.decrement}
+          currency={this.props.currency}
         />
         <h2 className="header">All Categories</h2>
         <div className="product-container">
