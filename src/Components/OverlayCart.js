@@ -44,7 +44,8 @@ class OverlayCart extends Component {
             <OverlayCartItems
               key={idx}
               name={name}
-              price={item.prices[0].amount}
+              symbol={symbol}
+              price={amount}
               quantity={quantity}
               photo={image}
               size={size}

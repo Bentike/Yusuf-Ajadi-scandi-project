@@ -9,7 +9,7 @@ class OverlayCartItems extends Component {
       <div className="overlayCartWrap">
         <div>
           <p className="cartOverlayItemName">{this.props.name}</p>
-          <p className="cartOverlayPrice">${this.props.price}</p>
+          <p className="cartOverlayPrice">{this.props.symbol}{this.props.price}</p>
           <p className="size">size</p>
           <CartOverlaySize/>
           <p className="cartColor">color</p>
