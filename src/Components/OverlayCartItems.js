@@ -17,9 +17,9 @@ class OverlayCartItems extends Component {
         </div>
         <div className="controlWrap">
           <div className="cartBtnDiv">
-            <button className="overlayCartBtn">+</button>
+            <button className="overlayCartBtn" onClick={() => this.props.increaseItem(this.props.size, this.props.color, this.props.name)}>+</button>
             <p className="cartQuantity">{this.props.quantity}</p>
-            <button className="overlayCartBtn">-</button>
+            <button className="overlayCartBtn" onClick={() => this.props.decreaseItem(this.props.size, this.props.color, this.props.name)}>-</button>
           </div>
           <div>
             <img src={this.props.photo} alt="item" className="overlayCartImg" />
