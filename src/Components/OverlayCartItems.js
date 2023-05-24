@@ -18,7 +18,7 @@ class OverlayCartItems extends Component {
         <div className="controlWrap">
           <div className="cartBtnDiv">
             <button className="overlayCartBtn">+</button>
-            <p className="cartQuantity">1</p>
+            <p className="cartQuantity">{this.props.quantity}</p>
             <button className="overlayCartBtn">-</button>
           </div>
           <div>
