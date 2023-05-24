@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import photo from "../Images/wool.png"
 import CartOverlaySize from "./CartOverlaySize";
 import CartOverlayColor from "./CartOverlayColor";
 
