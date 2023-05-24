@@ -52,13 +52,14 @@ class Navbar extends Component {
 
           <div className="cart-div">
             <div>
-              <select id="currency" onChange={this.props.handleCurrencyChange} value={this.props.selectedCurrency}>
+              <select
+                id="currency"
+                onChange={this.props.handleCurrencyChange}
+                value={this.props.selectedCurrency}
+              >
                 {this.props.currencies.map((currency) => {
                   return (
-                    <option
-                      key={currency.label}
-                      value={currency.symbol}
-                    >
+                    <option key={currency.label} value={currency.symbol}>
                       {currency.symbol}
                     </option>
                   );
@@ -84,7 +85,11 @@ class Navbar extends Component {
           style={{ display: this.state.overlay ? "block" : "none" }}
         >
           <div className="overlay-card">
-            <OverlayCart cart={this.props.cart}/>
+            <OverlayCart
+              cart={this.props.cart}
+              incrementItem={this.props.increment}
+              decrementItem={this.props.decrement}
+            />
           </div>
         </div>
       </div>
