@@ -12,6 +12,8 @@ class Clothes extends Component {
           selectedCurrency={this.props.selectedCurrency}
           cartLength={this.props.length}
           cart={this.props.cart}
+          increment={this.props.increment}
+          decrement={this.props.decrement}
         />
         <h2 className="header">Clothes Category</h2>
         <div className="product-container">

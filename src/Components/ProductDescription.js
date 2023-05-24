@@ -38,6 +38,8 @@ class ProductDescription extends Component {
           selectedCurrency={this.props.selectedCurrency}
           cartLength={this.props.length}
           cart={this.props.cart}
+          increment={this.props.increment}
+          decrement={this.props.decrement}
         />
         <div className="product">
           <div className="product-wrapper">
