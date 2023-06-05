@@ -57,7 +57,7 @@ class OverlayCart extends Component {
             />
           );
         })}
-        <MiniCheckout />
+        <MiniCheckout total={this.props.total}/>
       </div>
     );
   }
