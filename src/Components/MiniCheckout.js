@@ -8,7 +8,7 @@ class MiniCheckout extends Component {
       <div>
         <div className="totalWrap">
           <p>Total</p>
-          <p>$200.00</p>
+          <p>{this.props.total}</p>
         </div>
         <div className="miniBtnWrap">
           <button className="viewBag">
