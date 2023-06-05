@@ -237,7 +237,6 @@ class App extends Component {
               increment={increaseItem}
               decrement={decreaseItem}
               total={this.state.total}
-              getTotal={calculateTotal}
             />
           }
         />
@@ -256,7 +255,6 @@ class App extends Component {
               increment={increaseItem}
               decrement={decreaseItem}
               total={this.state.total}
-              getTotal={calculateTotal}
             />
           }
         />
@@ -275,7 +273,6 @@ class App extends Component {
               increment={increaseItem}
               decrement={decreaseItem}
               total={this.state.total}
-              getTotal={calculateTotal}
             />
           }
         />
@@ -296,7 +293,6 @@ class App extends Component {
               increment={increaseItem}
               decrement={decreaseItem}
               total={this.state.total}
-              getTotal={calculateTotal}
             />
           }
         />
@@ -315,7 +311,6 @@ class App extends Component {
               decrementItem={decreaseItem}
               length={this.state.cart.length}
               total={this.state.total}
-              getTotal={calculateTotal}
             />
           }
         />
