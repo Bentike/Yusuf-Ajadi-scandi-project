@@ -107,6 +107,20 @@ class App extends Component {
       });
     };
 
+     // This method calculate the price of all items in Cart.
+     const calculateTotal = () => {
+      let currency = this.state.selectedCurrency;
+      let totalPrice = 0;
+      for(let i = 0; i < this.state.cart.length; i++){
+         let currentCurrency = this.state.cart[i].prices.find(item => item.currency.symbol === currency);
+         let price = currentCurrency.amount * Number(this.state.cart[i].quantity);
+        totalPrice += price;
+      }
+      this.setState({
+         total: `${currency}${totalPrice}`
+      })
+  }
+
     // this method sets the user selected currency
     const handleCurrencyChange = (event) => {
       this.setState({
@@ -153,6 +167,8 @@ class App extends Component {
       this.setState({
         cart: this.state.cart.concat(this.state.selectedProduct),
       });
+      calculateTotal();
+      console.log("Total Calculated")
     };
 
     // this method gets the selected Size attribute of a product and sets it's value to this.state.selectedSize
@@ -182,20 +198,6 @@ class App extends Component {
         selectedProduct: newProductColor,
       });
     };
-
-     // This method calculate the price of all items in Cart.
-     const calculateTotal = () => {
-      let currency = this.state.selectedCurrency;
-      let totalPrice = 0;
-      for(let i = 0; i < this.state.cart.length; i++){
-         let currentCurrency = this.state.cart[i].prices.find(item => item.currency.symbol === currency);
-         let price = currentCurrency.amount * Number(this.state.cart[i].quantity);
-        totalPrice += price;
-      }
-      this.setState({
-         total: `${currency}${totalPrice}`
-      })
-  }
 
     // This fucntion Increment items in the Cart.
     const increaseItem = (size, color, name) => {
