@@ -152,8 +152,6 @@ class App extends Component {
       this.setState({
         cart: this.state.cart.concat(this.state.selectedProduct),
       });
-      // Debugging...
-      console.log(this.state.cart);
     };
 
     // this method gets the selected Size attribute of a product and sets it's value to this.state.selectedSize
