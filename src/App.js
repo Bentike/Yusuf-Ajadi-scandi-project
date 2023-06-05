@@ -111,6 +111,7 @@ class App extends Component {
       let currency = this.state.selectedCurrency;
       let totalPrice = 0;
       for(let i = 0; i < this.state.cart.length; i++){
+        console.log(this.state.cart[i].quantity)
          let currentCurrency = this.state.cart[i].prices.find(item => item.currency.symbol === currency);
          let price = currentCurrency.amount * Number(this.state.cart[i].quantity);
         totalPrice += price;
