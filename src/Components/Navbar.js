@@ -90,6 +90,7 @@ class Navbar extends Component {
               incrementItem={this.props.increment}
               decrementItem={this.props.decrement}
               currency={this.props.currency}
+              total={this.props.total}
             />
           </div>
         </div>
