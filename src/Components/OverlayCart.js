@@ -4,10 +4,6 @@ import MiniCheckout from "./MiniCheckout";
 import OverlayCartItems from "./OverlayCartItems";
 
 class OverlayCart extends Component {
-  // componentDidUpdate() {
-  //   console.log("Cart Updated");
-  //   this.props.calculateTotal();
-  // }
   render() {
     return (
       <div className="miniCartWrap">
@@ -30,7 +26,6 @@ class OverlayCart extends Component {
             size,
             color,
           } = item;
-          console.log(quantity)
           let sizes = [];
           let colors = [];
           if (item.category === "clothes") {
