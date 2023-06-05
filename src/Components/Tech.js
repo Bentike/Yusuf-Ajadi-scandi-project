@@ -15,6 +15,7 @@ class Tech extends Component {
           increment={this.props.increment}
           decrement={this.props.decrement}
           currency={this.props.currency}
+          total={this.props.total}
         />
         <h2 className="header">Tech Category</h2>
         <div className="product-container">
