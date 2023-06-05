@@ -183,6 +183,20 @@ class App extends Component {
       });
     };
 
+     // This method calculate the price of all items in Cart.
+     const calculateTotal = () => {
+      let currency = this.state.selectedCurrency;
+      let totalPrice = 0;
+      for(let i = 0; i < this.state.cart.length; i++){
+         let currentCurrency = this.state.cart[i].prices.find(item => item.currency.symbol === currency);
+         let price = currentCurrency.amount * Number(this.state.cart[i].quantity);
+        totalPrice += price;
+      }
+      this.setState({
+         total: `${currency}${totalPrice}`
+      })
+  }
+
     // This fucntion Increment items in the Cart.
     const increaseItem = (size, color, name) => {
       let product = this.state.cart.find((item) => {
@@ -194,6 +208,7 @@ class App extends Component {
       this.setState({
         cart: this.state.cart,
       });
+      calculateTotal();
     };
 
     // This function decrement items in the Cart.
@@ -209,16 +224,8 @@ class App extends Component {
       this.setState({
         cart: this.state.cart,
       });
+      calculateTotal();
     };
-
-    // This method calculate the price of all items in Cart.
-    const calculateTotal = () => {
-        // this.state.selectedCurrency
-        let totalPrice = 0;
-        for(let i = 0; i < this.state.cart.length; i++){
-            console.log(this.state.cart[i]);
-        }
-    }
 
     return (
       <Routes>
