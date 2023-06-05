@@ -4,6 +4,10 @@ import MiniCheckout from "./MiniCheckout";
 import OverlayCartItems from "./OverlayCartItems";
 
 class OverlayCart extends Component {
+  componentDidMount() {
+    console.log("Cart Mounted");
+    this.props.calculateTotal();
+  }
   render() {
     return (
       <div className="miniCartWrap">
@@ -16,30 +20,39 @@ class OverlayCart extends Component {
           </span>
         </h5>
         {this.props.cart.map((item, idx) => {
-           const { category, name, quantity, gallery, prices, attributes, size, color } = item;
-           let sizes = [];
-           let colors = [];
-           if(item.category === "clothes"){ 
-             colors = null;
+          const {
+            category,
+            name,
+            quantity,
+            gallery,
+            prices,
+            attributes,
+            size,
+            color,
+          } = item;
+          let sizes = [];
+          let colors = [];
+          if (item.category === "clothes") {
+            colors = null;
             sizes = item.attributes[0].items;
-           }else if(item.category === "tech"){
-             sizes = null;
+          } else if (item.category === "tech") {
+            sizes = null;
             if (attributes.length) {
-              for (let attr of attributes){
+              for (let attr of attributes) {
                 if (attr.id === "Color") colors = attr.items;
                 continue;
               }
             }
-           }
-           let image = gallery[0];
-           let amount;
-           let symbol;
-           for (let i = 0; i < prices.length; i++) {
-             if (prices[i].currency.symbol === this.props.currency) {
-               amount = prices[i].amount;
-               symbol = prices[i].currency.symbol;
-             }
-           }
+          }
+          let image = gallery[0];
+          let amount;
+          let symbol;
+          for (let i = 0; i < prices.length; i++) {
+            if (prices[i].currency.symbol === this.props.currency) {
+              amount = prices[i].amount;
+              symbol = prices[i].currency.symbol;
+            }
+          }
           return (
             <OverlayCartItems
               key={idx}
@@ -57,7 +70,7 @@ class OverlayCart extends Component {
             />
           );
         })}
-        <MiniCheckout total={this.props.total}/>
+        <MiniCheckout total={this.props.total} />
       </div>
     );
   }

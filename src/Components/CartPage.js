@@ -21,20 +21,30 @@ class CartPage extends Component {
         <h2 className="cart-header">CART</h2>
         <hr />
         {this.props.cart.map((item) => {
-          const { category, name, brand, quantity, gallery, prices, attributes, size, color } = item;
+          const {
+            category,
+            name,
+            brand,
+            quantity,
+            gallery,
+            prices,
+            attributes,
+            size,
+            color,
+          } = item;
           let sizes = [];
           let colors = [];
-          if(item.category === "clothes"){ 
+          if (item.category === "clothes") {
             colors = null;
-           sizes = item.attributes[0].items;
-          }else if(item.category === "tech"){
+            sizes = item.attributes[0].items;
+          } else if (item.category === "tech") {
             sizes = null;
-           if (attributes.length) {
-             for (let attr of attributes){
-               if (attr.id === "Color") colors = attr.items;
-               continue;
-             }
-           }
+            if (attributes.length) {
+              for (let attr of attributes) {
+                if (attr.id === "Color") colors = attr.items;
+                continue;
+              }
+            }
           }
           let image = gallery[0];
           let amount;
@@ -46,7 +56,7 @@ class CartPage extends Component {
             }
           }
           return (
-            <CartItem 
+            <CartItem
               key={category === "clothes" ? name + size : name + color}
               name={name}
               brand={brand}
@@ -62,7 +72,7 @@ class CartPage extends Component {
               setColor={this.props.setColor}
               increaseItem={this.props.incrementItem}
               decreaseItem={this.props.decrementItem}
-            /> 
+            />
           );
         })}
         <Checkout />

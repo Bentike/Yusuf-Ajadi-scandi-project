@@ -5,7 +5,6 @@ import ProductDescription from "./Components/ProductDescription";
 import CartPage from "./Components/CartPage";
 import Clothes from "./Components/Clothes";
 import Tech from "./Components/Tech";
-import Bar from "./Components/Bar";
 import "./App.css";
 
 class App extends Component {
@@ -98,7 +97,7 @@ class App extends Component {
 
   render() {
     // This method will get the data of the clicked product and pass it to this.state.selectedProduct
-    // this method will be passed as a prop to Product.jXs
+    // this method will be passed as a prop to Product.js
     const handleProductClick = (item) => {
       let product = this.state.allProducts.find((prod) => prod.name === item);
       let updatedProduct = Object.assign({}, product, { quantity: 1 });
@@ -246,6 +245,7 @@ class App extends Component {
               increment={increaseItem}
               decrement={decreaseItem}
               total={this.state.total}
+              calculateTotal={calculateTotal}
             />
           }
         />
@@ -264,6 +264,7 @@ class App extends Component {
               increment={increaseItem}
               decrement={decreaseItem}
               total={this.state.total}
+              calculateTotal={calculateTotal}
             />
           }
         />
@@ -282,6 +283,7 @@ class App extends Component {
               increment={increaseItem}
               decrement={decreaseItem}
               total={this.state.total}
+              calculateTotal={calculateTotal}
             />
           }
         />
@@ -302,6 +304,7 @@ class App extends Component {
               increment={increaseItem}
               decrement={decreaseItem}
               total={this.state.total}
+              calculateTotal={calculateTotal}
             />
           }
         />
@@ -320,6 +323,7 @@ class App extends Component {
               decrementItem={decreaseItem}
               length={this.state.cart.length}
               total={this.state.total}
+              calculateTotal={calculateTotal}
             />
           }
         />
