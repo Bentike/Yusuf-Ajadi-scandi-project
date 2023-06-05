@@ -183,7 +183,7 @@ class App extends Component {
       });
     };
 
-    // To work on Incrementing and Decrementing Item function Insha Allah
+    // This fucntion Increment items in the Cart.
     const increaseItem = (size, color, name) => {
       let product = this.state.cart.find((item) => {
         if (item.size) return item.size === size && item.name === name;
@@ -196,6 +196,7 @@ class App extends Component {
       });
     };
 
+    // This function decrement items in the Cart.
     const decreaseItem = (size, color, name) => {
       let product = this.state.cart.find((item) => {
         if (item.size) return item.size === size && item.name === name;
@@ -209,6 +210,15 @@ class App extends Component {
         cart: this.state.cart,
       });
     };
+
+    // This method calculate the price of all items in Cart.
+    const calculateTotal = () => {
+        // this.state.selectedCurrency
+        let totalPrice = 0;
+        for(let i = 0; i < this.state.cart.length; i++){
+            console.log(this.state.cart[i]);
+        }
+    }
 
     return (
       <Routes>
@@ -227,6 +237,7 @@ class App extends Component {
               increment={increaseItem}
               decrement={decreaseItem}
               total={this.state.total}
+              getTotal={calculateTotal}
             />
           }
         />
@@ -245,6 +256,7 @@ class App extends Component {
               increment={increaseItem}
               decrement={decreaseItem}
               total={this.state.total}
+              getTotal={calculateTotal}
             />
           }
         />
@@ -263,6 +275,7 @@ class App extends Component {
               increment={increaseItem}
               decrement={decreaseItem}
               total={this.state.total}
+              getTotal={calculateTotal}
             />
           }
         />
@@ -283,6 +296,7 @@ class App extends Component {
               increment={increaseItem}
               decrement={decreaseItem}
               total={this.state.total}
+              getTotal={calculateTotal}
             />
           }
         />
@@ -301,6 +315,7 @@ class App extends Component {
               decrementItem={decreaseItem}
               length={this.state.cart.length}
               total={this.state.total}
+              getTotal={calculateTotal}
             />
           }
         />
