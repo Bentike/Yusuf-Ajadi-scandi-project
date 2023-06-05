@@ -16,6 +16,7 @@ class CartPage extends Component {
           cart={this.props.cart}
           increment={this.props.increment}
           decrement={this.props.decrement}
+          total={this.props.total}
         />
         <h2 className="cart-header">CART</h2>
         <hr />
