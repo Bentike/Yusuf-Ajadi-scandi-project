@@ -5,6 +5,7 @@ import ProductDescription from "./Components/ProductDescription";
 import CartPage from "./Components/CartPage";
 import Clothes from "./Components/Clothes";
 import Tech from "./Components/Tech";
+import Bar from "./Components/Bar";
 import "./App.css";
 
 class App extends Component {

@@ -4,8 +4,8 @@ import CartOverlayColor from "./CartOverlayColor";
 import Sizes from "./Sizes";
 import Colors from "./Colors";
 
-const style = { width: "35px", height: "28px", margin: "0 2px" };
-
+const style = { width: "35px", height: "28px", margin: "0 5px" };
+ 
 class OverlayCartItems extends Component {
   render() {
     const hexToRgb = (hex) => {
