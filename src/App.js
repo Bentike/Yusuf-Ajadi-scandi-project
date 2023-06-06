@@ -116,7 +116,7 @@ class App extends Component {
          totalPrice += price;
       }
       this.setState({
-         total: `${currency}${totalPrice}`
+         total: `${currency}${totalPrice.toFixed(2)}`
       });
   }
 
