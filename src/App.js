@@ -327,6 +327,7 @@ class App extends Component {
               length={this.state.cart.length}
               total={this.state.total}
               calculateTotal={calculateTotal}
+              quantity={this.state.quantity}
             />
           }
         />
