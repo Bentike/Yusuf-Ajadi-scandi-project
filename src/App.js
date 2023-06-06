@@ -20,7 +20,8 @@ class App extends Component {
       techProducts: [],
       clotheProducts: [],
       cart: [],
-      total: 0
+      total: 0,
+      quantity: 0
     };
   }
 
