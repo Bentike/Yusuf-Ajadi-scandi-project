@@ -113,11 +113,11 @@ class App extends Component {
       for(let i = 0; i < this.state.cart.length; i++){
          let currentCurrency = this.state.cart[i].prices.find(item => item.currency.symbol === currency);
          let price = currentCurrency.amount * Number(this.state.cart[i].quantity);
-        totalPrice += price;
+         totalPrice += price;
       }
       this.setState({
          total: `${currency}${totalPrice}`
-      })
+      });
   }
 
     // this method sets the user selected currency
@@ -165,8 +165,9 @@ class App extends Component {
 
       this.setState({
         cart: this.state.cart.concat(this.state.selectedProduct),
+      }, () => {
+        calculateTotal()
       });
-      calculateTotal();
     };
 
     // this method gets the selected Size attribute of a product and sets it's value to this.state.selectedSize
