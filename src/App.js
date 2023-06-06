@@ -124,6 +124,8 @@ class App extends Component {
     const handleCurrencyChange = (event) => {
       this.setState({
         selectedCurrency: event.target.value,
+      }, () => {
+        calculateTotal();
       });
     };
 
