@@ -117,6 +117,10 @@ class App extends Component {
        })
     }
 
+    const checkout = () => {
+      console.log("Thanks for your patronage");
+    }
+
      // This method calculate the price of all items in Cart.
      const calculateTotal = () => {
       let currency = this.state.selectedCurrency;
@@ -341,6 +345,7 @@ class App extends Component {
               total={this.state.total}
               calculateTotal={calculateTotal}
               quantity={this.state.quantity}
+              checkout={checkout}
             />
           }
         />
