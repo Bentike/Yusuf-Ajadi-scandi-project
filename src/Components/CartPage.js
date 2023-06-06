@@ -18,6 +18,7 @@ class CartPage extends Component {
           decrement={this.props.decrement}
           total={this.props.total}
           calculateTotal={this.props.calculateTotal}
+          checkout={this.props.checkout}
         />
         <h2 className="cart-header">CART</h2>
         <hr />

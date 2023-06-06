@@ -17,6 +17,7 @@ class Tech extends Component {
           currency={this.props.currency}
           total={this.props.total}
           calculateTotal={this.props.calculateTotal}
+          checkout={this.props.checkout}
         />
         <h2 className="header">Tech Category</h2>
         <div className="product-container">

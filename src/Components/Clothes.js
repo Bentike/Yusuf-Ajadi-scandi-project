@@ -17,6 +17,7 @@ class Clothes extends Component {
           currency={this.props.currency}
           total={this.props.total}
           calculateTotal={this.props.calculateTotal}
+          checkout={this.props.checkout}
         />
         <h2 className="header">Clothes Category</h2>
         <div className="product-container">
