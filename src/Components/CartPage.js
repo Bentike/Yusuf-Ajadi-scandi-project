@@ -76,7 +76,7 @@ class CartPage extends Component {
             />
           );
         })}
-        <Checkout />
+        <Checkout total={this.props.total} />
       </div>
     );
   }
