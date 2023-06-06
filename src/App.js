@@ -107,6 +107,16 @@ class App extends Component {
       });
     };
 
+    const calculateQuantity = () => {
+       let totalQuantity = 0;
+       for(let i = 0; i < this.state.cart.length; i++){
+          totalQuantity += this.state.cart[i].quantity;
+       }
+       this.setState({
+         quantity: totalQuantity
+       })
+    }
+
      // This method calculate the price of all items in Cart.
      const calculateTotal = () => {
       let currency = this.state.selectedCurrency;
@@ -169,7 +179,8 @@ class App extends Component {
       this.setState({
         cart: this.state.cart.concat(this.state.selectedProduct),
       }, () => {
-        calculateTotal()
+        calculateTotal();
+        calculateQuantity();
       });
     };
 
@@ -213,6 +224,7 @@ class App extends Component {
         cart: this.state.cart,
       });
       calculateTotal();
+      calculateQuantity();
     };
 
     // This function decrement items in the Cart.
@@ -229,6 +241,7 @@ class App extends Component {
         cart: this.state.cart,
       });
       calculateTotal();
+      calculateQuantity();
     };
 
     return (
