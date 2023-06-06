@@ -7,7 +7,7 @@ class Checkout extends Component{
             <div className="checkout">
                 <p>Tax 21% : <span className="val">$40</span></p>
                 <p>Quantity : <span className="val qty">3</span></p>
-                <p>Total : <span className="val total">$300</span></p>
+                <p>Total : <span className="val total">{this.props.total}</span></p>
                 <button className="checkout-btn">ORDER</button>
             </div>
         );
