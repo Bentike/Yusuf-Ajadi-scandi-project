@@ -117,8 +117,13 @@ class App extends Component {
        })
     }
 
+    // This method is called when the checkout or order button is clicked.
     const checkout = () => {
-      console.log("Thanks for your patronage");
+      if(!this.state.cart.length){
+        console.log("You have no item in cart to checkout");
+      }else{
+        console.log("Thanks for your patronage");
+      }
     }
 
      // This method calculate the price of all items in Cart.
@@ -266,6 +271,7 @@ class App extends Component {
               decrement={decreaseItem}
               total={this.state.total}
               calculateTotal={calculateTotal}
+              checkout={checkout}
             />
           }
         />
@@ -285,6 +291,7 @@ class App extends Component {
               decrement={decreaseItem}
               total={this.state.total}
               calculateTotal={calculateTotal}
+              checkout={checkout}
             />
           }
         />
@@ -304,6 +311,7 @@ class App extends Component {
               decrement={decreaseItem}
               total={this.state.total}
               calculateTotal={calculateTotal}
+              checkout={checkout}
             />
           }
         />
@@ -325,6 +333,7 @@ class App extends Component {
               decrement={decreaseItem}
               total={this.state.total}
               calculateTotal={calculateTotal}
+              checkout={checkout}
             />
           }
         />

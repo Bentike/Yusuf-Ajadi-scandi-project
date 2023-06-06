@@ -92,6 +92,7 @@ class Navbar extends Component {
               currency={this.props.currency}
               total={this.props.total}
               calculateTotal={this.props.calculateTotal}
+              checkout={this.props.checkout}
             />
           </div>
         </div>

@@ -16,7 +16,7 @@ class MiniCheckout extends Component {
               VIEW BAG
             </NavLink>
           </button>
-          <button className="miniCheckoutBtn">CHECKOUT</button>
+          <button className="miniCheckoutBtn" onClick={this.props.checkout}>CHECKOUT</button>
         </div>
       </div>
     );
