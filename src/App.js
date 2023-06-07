@@ -245,12 +245,19 @@ class App extends Component {
       });
       if (product.quantity >= 1) {
         product.quantity -= 1;
+      }if(product.quantity < 1){
+         // remove item from cart
+         console.log("item less than 1")
+         this.setState({
+          cart: [...this.state.cart.slice(0, this.state.cart.indexOf(product)), ...this.state.cart.slice(this.state.cart.indexOf(product) + 1)]
+         });
+      }else{
+        this.setState({
+          cart: this.state.cart,
+        });
+        calculateTotal();
+        calculateQuantity();
       }
-      this.setState({
-        cart: this.state.cart,
-      });
-      calculateTotal();
-      calculateQuantity();
     };
 
     return (
