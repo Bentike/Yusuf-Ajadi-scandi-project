@@ -246,6 +246,7 @@ class App extends Component {
     };
 
     // This function decrement items in the Cart.
+    // This fucntion also remove item from cart when the quantity is less than 1.
     const decreaseItem = (size, color, name) => {
       let product = this.state.cart.find((item) => {
         if (item.size) return item.size === size && item.name === name;
