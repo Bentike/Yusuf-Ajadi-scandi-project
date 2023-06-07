@@ -21,7 +21,7 @@ class App extends Component {
       clotheProducts: [],
       cart: [],
       total: 0,
-      quantity: 0
+      quantity: 0,
     };
   }
 
@@ -108,45 +108,51 @@ class App extends Component {
     };
 
     const calculateQuantity = () => {
-       let totalQuantity = 0;
-       for(let i = 0; i < this.state.cart.length; i++){
-          totalQuantity += this.state.cart[i].quantity;
-       }
-       this.setState({
-         quantity: totalQuantity
-       })
-    }
+      let totalQuantity = 0;
+      for (let i = 0; i < this.state.cart.length; i++) {
+        totalQuantity += this.state.cart[i].quantity;
+      }
+      this.setState({
+        quantity: totalQuantity,
+      });
+    };
 
     // This method is called when the checkout or order button is clicked.
     const checkout = () => {
-      if(!this.state.cart.length){
+      if (!this.state.cart.length) {
         console.log("You have no item in cart to checkout");
-      }else{
+      } else {
         console.log("Thanks for your patronage");
       }
-    }
+    };
 
-     // This method calculate the price of all items in Cart.
-     const calculateTotal = () => {
+    // This method calculate the price of all items in Cart.
+    const calculateTotal = () => {
       let currency = this.state.selectedCurrency;
       let totalPrice = 0;
-      for(let i = 0; i < this.state.cart.length; i++){
-         let currentCurrency = this.state.cart[i].prices.find(item => item.currency.symbol === currency);
-         let price = currentCurrency.amount * Number(this.state.cart[i].quantity);
-         totalPrice += price;
+      for (let i = 0; i < this.state.cart.length; i++) {
+        let currentCurrency = this.state.cart[i].prices.find(
+          (item) => item.currency.symbol === currency
+        );
+        let price =
+          currentCurrency.amount * Number(this.state.cart[i].quantity);
+        totalPrice += price;
       }
       this.setState({
-         total: `${currency}${totalPrice.toFixed(2)}`
+        total: `${currency}${totalPrice.toFixed(2)}`,
       });
-  }
+    };
 
     // this method sets the user selected currency
     const handleCurrencyChange = (event) => {
-      this.setState({
-        selectedCurrency: event.target.value,
-      }, () => {
-        calculateTotal();
-      });
+      this.setState(
+        {
+          selectedCurrency: event.target.value,
+        },
+        () => {
+          calculateTotal();
+        }
+      );
     };
 
     // this method add items to the cart
@@ -185,12 +191,15 @@ class App extends Component {
         return;
       }
 
-      this.setState({
-        cart: this.state.cart.concat(this.state.selectedProduct),
-      }, () => {
-        calculateTotal();
-        calculateQuantity();
-      });
+      this.setState(
+        {
+          cart: this.state.cart.concat(this.state.selectedProduct),
+        },
+        () => {
+          calculateTotal();
+          calculateQuantity();
+        }
+      );
     };
 
     // this method gets the selected Size attribute of a product and sets it's value to this.state.selectedSize
@@ -245,13 +254,22 @@ class App extends Component {
       });
       if (product.quantity >= 1) {
         product.quantity -= 1;
-      }if(product.quantity < 1){
-         // remove item from cart
-         console.log("item less than 1")
-         this.setState({
-          cart: [...this.state.cart.slice(0, this.state.cart.indexOf(product)), ...this.state.cart.slice(this.state.cart.indexOf(product) + 1)]
-         });
-      }else{
+      }
+      if (product.quantity < 1) {
+        // remove item from cart
+        this.setState(
+          {
+            cart: [
+              ...this.state.cart.slice(0, this.state.cart.indexOf(product)),
+              ...this.state.cart.slice(this.state.cart.indexOf(product) + 1),
+            ],
+          },
+          () => {
+            calculateQuantity();
+            calculateTotal();
+          }
+        );
+      } else {
         this.setState({
           cart: this.state.cart,
         });
