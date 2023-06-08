@@ -120,14 +120,14 @@ class App extends Component {
     // This method is called when the checkout or order button is clicked.
     const checkout = () => {
       if (!this.state.cart.length) {
-        console.log("You have no item in cart to checkout");
+        alert("You have no item in cart to checkout");
       } else {
        alert("Payment Successful");
        this.setState({
         cart: [],
         total: 0,
         quantity: 0
-       })
+       });
       }
     };
 
@@ -169,7 +169,7 @@ class App extends Component {
           this.state.selectedProduct.category === "clothes"
         ) {
           if (item.size === this.state.selectedProduct.size) {
-            console.log("Item already in cart");
+            alert("Item already in cart");
             return;
           }
         } else if (
@@ -180,7 +180,7 @@ class App extends Component {
             item.color === this.state.selectedProduct.color &&
             item.name === this.state.selectedProduct.name
           ) {
-            console.log("Item already in cart");
+            alert("Item already in cart");
             return;
           }
         }
@@ -189,16 +189,17 @@ class App extends Component {
         (this.state.selectedProduct.category === "clothes" &&
           !this.state.selectedSize) ||
         (this.state.selectedProduct.category === "tech" &&
-          !this.state.selectedProduct.attributes &&
           !this.state.selectedColor)
       ) {
-        console.log("please select a color or size");
+        alert("please select a color or size");
         return;
       }
 
       this.setState(
         {
           cart: this.state.cart.concat(this.state.selectedProduct),
+          selectedSize: "",
+          selectedColor: ""
         },
         () => {
           calculateTotal();
