@@ -122,7 +122,12 @@ class App extends Component {
       if (!this.state.cart.length) {
         console.log("You have no item in cart to checkout");
       } else {
-        console.log("Thanks for your patronage");
+       alert("Payment Successful");
+       this.setState({
+        cart: [],
+        total: 0,
+        quantity: 0
+       })
       }
     };
 
