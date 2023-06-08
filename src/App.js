@@ -122,12 +122,12 @@ class App extends Component {
       if (!this.state.cart.length) {
         alert("You have no item in cart to checkout");
       } else {
-       alert("Payment Successful");
-       this.setState({
-        cart: [],
-        total: 0,
-        quantity: 0
-       });
+        alert("Payment Successful");
+        this.setState({
+          cart: [],
+          total: 0,
+          quantity: 0,
+        });
       }
     };
 
@@ -186,20 +186,17 @@ class App extends Component {
         }
       }
       if (
-        (this.state.selectedProduct.category === "clothes" &&
-          !this.state.selectedSize) ||
-        (this.state.selectedProduct.category === "tech" &&
-          !this.state.selectedColor)
+        this.state.selectedProduct.category === "clothes" &&
+        !this.state.selectedSize
       ) {
-        alert("please select a color or size");
+        alert("please select a size");
         return;
       }
-
       this.setState(
         {
           cart: this.state.cart.concat(this.state.selectedProduct),
           selectedSize: "",
-          selectedColor: ""
+          selectedColor: "",
         },
         () => {
           calculateTotal();
