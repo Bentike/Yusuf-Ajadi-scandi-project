@@ -192,6 +192,22 @@ class App extends Component {
         alert("please select a size");
         return;
       }
+      if (this.state.selectedProduct.category === "tech") {
+        if (
+          !this.state.selectedProduct.attributes.length ||
+          (this.state.selectedProduct.attributes[0].id === "Capacity" &&
+            this.state.selectedProduct.name === "iMac 2021")
+        ) {
+          this.setState({
+            cart: this.state.cart.concat(this.state.selectedProduct),
+            selectedSize: "",
+            selectedColor: "",
+          });
+        } else if(this.state.selectedProduct.attributes.length && !this.state.selectedColor){
+          alert("please select a color");
+          return;
+        }
+      }
       this.setState(
         {
           cart: this.state.cart.concat(this.state.selectedProduct),
