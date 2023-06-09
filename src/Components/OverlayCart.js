@@ -17,7 +17,6 @@ class OverlayCart extends Component {
         </h5>
         {this.props.cart.map((item, idx) => {
           const {
-            category,
             name,
             quantity,
             gallery,
