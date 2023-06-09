@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import CartOverlaySize from "./CartOverlaySize";
-import CartOverlayColor from "./CartOverlayColor";
 import Sizes from "./Sizes";
 import Colors from "./Colors";
 
