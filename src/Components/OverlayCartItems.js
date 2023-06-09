@@ -41,7 +41,6 @@ class OverlayCartItems extends Component {
                       <Sizes
                         key={item.value}
                         size={item.value}
-                        setSize={this.props.setSize}
                       />
                     </div>
                   );
@@ -60,7 +59,6 @@ class OverlayCartItems extends Component {
                       <Colors
                         key={color.value}
                         color={color.value}
-                        setColor={this.props.setColor}
                       />
                     </div>
                   );
