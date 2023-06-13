@@ -4,14 +4,8 @@ import CartItem from "./CartItem";
 import Checkout from "./Checkout";
 import "../Styles/Cart.css";
 
-
-const paras = document.getElementsByClassName("my-size");
-
 class CartPage extends Component {
   render() {
-   for(let i = 0; i < paras.length; i++){
-    //  To work on removing onClick event on paragraphs
-   }
     return (
       <div className="category">
         <Navbar
